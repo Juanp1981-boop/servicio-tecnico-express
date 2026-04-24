@@ -10,23 +10,24 @@
         .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
         .floating-wa { position: fixed; bottom: 20px; right: 20px; z-index: 1000; transition: transform 0.3s; }
         .floating-wa:hover { transform: scale(1.1); }
+        .gallery-img { width: 100%; height: 300px; object-fit: cover; border-radius: 1.5rem; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans leading-tight">
 
-    <a href="https://wa.me/57TU_NUMERO?text=Hola,%20necesito%20un%20tecnico%20urgente" class="floating-wa bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center animate-pulse">
+    <a href="https://wa.me/573045864731?text=Hola,%20vengo%20de%20la%20web.%20Necesito%20un%20técnico%20urgente%20para%20una%20reparación." class="floating-wa bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center animate-pulse">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
     <div class="bg-yellow-400 text-black text-center py-2 font-bold text-sm">
-        ⚠️ ATENCIÓN: Técnicos disponibles hoy en Barranquilla. ¡Agenda antes de las 2 PM!
+        ⚠️ ATENCIÓN: Técnicos disponibles hoy en Barranquilla. ¡Agenda ahora!
     </div>
 
-    <header class="bg-white py-4 shadow-sm">
+    <header class="bg-white py-4 shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="text-2xl font-black text-blue-700 uppercase tracking-tighter">Técnico<span class="text-blue-500">Ya!</span></div>
             <a href="tel:+573045864731" class="flex items-center text-blue-700 font-bold border-2 border-blue-700 px-4 py-2 rounded-lg hover:bg-blue-50 transition">
-                <i class="fas fa-phone-alt mr-2"></i> <span>Llamar Ahora</span>
+                <i class="fas fa-phone-alt mr-2"></i> <span>304 586 4731</span>
             </a>
         </div>
     </header>
@@ -36,46 +37,74 @@
             <div>
                 <span class="bg-blue-500 text-white px-3 py-1 rounded text-xs font-bold uppercase mb-4 inline-block">Servicio a Domicilio 24/7</span>
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-none">Reparamos tu Nevera o Lavadora <span class="text-yellow-300">Hoy Mismo.</span></h1>
-                <p class="text-xl mb-8 opacity-90">Técnicos certificados con repuestos originales y garantía por escrito.</p>
-                
+                <p class="text-xl mb-8 opacity-90">Técnicos expertos en Barranquilla con repuestos originales y garantía por escrito.</p>
                 <div class="flex flex-col sm:row gap-4">
-                    <a href="tel:+57TU_NUMERO" class="bg-white text-blue-700 hover:bg-gray-100 px-8 py-5 rounded-xl text-xl font-black shadow-xl flex items-center justify-center transition uppercase">
-                        <i class="fas fa-phone-alt mr-3 text-2xl"></i> Solicitar Técnico
+                    <a href="tel:+573045864731" class="bg-white text-blue-700 hover:bg-gray-100 px-8 py-5 rounded-xl text-xl font-black shadow-xl flex items-center justify-center transition uppercase">
+                        <i class="fas fa-phone-alt mr-3 text-2xl"></i> Llamar al Técnico
                     </a>
                 </div>
             </div>
             
             <div class="bg-white p-8 rounded-3xl shadow-2xl text-gray-800">
-                <h3 class="text-2xl font-bold mb-4 text-center">¡Cotiza tu Reparación!</h3>
+                <h3 class="text-2xl font-bold mb-4 text-center text-blue-700">¡Agenda tu Cita!</h3>
                 <form action="#" class="space-y-4">
                     <input type="text" placeholder="Tu Nombre" class="w-full p-4 bg-gray-100 rounded-xl border-none">
-                    <select class="w-full p-4 bg-gray-100 rounded-xl border-none text-gray-500">
-                        <option>¿Qué electrodoméstico falla?</option>
+                    <select class="w-full p-4 bg-gray-100 rounded-xl border-none text-gray-600">
+                        <option>¿Qué equipo falla?</option>
                         <option>Nevera / Nevecón</option>
                         <option>Lavadora / Secadora</option>
                     </select>
-                    <button type="button" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg transition uppercase">Enviar Datos</button>
+                    <button type="button" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg transition uppercase">Pedir Presupuesto</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">Expertos en Todas las Marcas</h2>
-            <div class="flex flex-wrap justify-center gap-8 opacity-40 grayscale">
-                <span class="text-2xl font-black italic">SAMSUNG</span>
-                <span class="text-2xl font-black italic">LG</span>
-                <span class="text-2xl font-black italic">WHIRLPOOL</span>
-                <span class="text-2xl font-black italic">MABE</span>
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-black text-center text-gray-900 mb-12">Nuestros Servicios en Acción</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=800&auto=format&fit=crop" class="gallery-img shadow-xl">
+                    <div class="absolute bottom-0 left-0 right-0 bg-blue-700/80 p-4 rounded-b-2xl text-white">
+                        <p class="font-bold">Mantenimiento de Lavadoras</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" class="gallery-img shadow-xl">
+                    <div class="absolute bottom-0 left-0 right-0 bg-blue-700/80 p-4 rounded-b-2xl text-white">
+                        <p class="font-bold">Reparación de Neveras y Nevecones</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-blue-900 text-white py-10 px-4 text-center">
-        <p class="text-sm text-blue-200">© 2026 Servicio Técnico Profesional - Especialistas en Línea Blanca</p>
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center">
+                    <i class="fas fa-check-double text-blue-600 text-4xl mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Originales</h4>
+                    <p class="text-gray-600 text-sm">Usamos solo repuestos genuinos para cada marca.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center">
+                    <i class="fas fa-id-badge text-blue-600 text-4xl mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Expertos</h4>
+                    <p class="text-gray-600 text-sm">Técnicos certificados con años de experiencia.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center">
+                    <i class="fas fa-shield-alt text-blue-600 text-4xl mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Garantía</h4>
+                    <p class="text-gray-600 text-sm">Garantía total por escrito en cada reparación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-8 text-center text-sm opacity-60">
+        <p>© 2026 Técnico Ya! Barranquilla. Especialistas en Reparación.</p>
     </footer>
 
 </body>
 </html>
-   
