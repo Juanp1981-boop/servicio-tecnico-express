@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiservices SOS | Reparación de Neveras y Lavadoras</title>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* ESTILOS INCRUSTADOS PARA EVITAR ERRORES DE CARGA */
-        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #24d366; --gris: #f4f4f4; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
 
-        /* Header Fijo */
-        header { background: var(--azul); padding: 15px 0; border-bottom: 4px solid var(--amarillo); position: fixed; width: 100%; top: 0; z-index: 1000; text-align: center; }
-        .logo-text { color: white; font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
-        .header-phone { display: block; color: var(--amarillo); font-weight: bold; text-decoration: none; font-size: 1.2rem; margin-top: 5px; }
+        header { background: #004a99; padding: 15px 0; border-bottom: 4px solid #ffcc00; position: fixed; width: 100%; top: 0; z-index: 1000; text-align: center; }
+        .logo-text { color: white; font-size: 1.6rem; font-weight: bold; text-transform: uppercase; }
+        .header-phone { display: block; color: #ffcc00; font-weight: bold; text-decoration: none; font-size: 1.2rem; margin-top: 5px; }
 
-        /* Hero */
         .hero { background: linear-gradient(135deg, #004a99 0%, #002d62 100%); color: white; padding: 140px 20px 40px; text-align: center; }
-        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
-        .hero h1 span { color: var(--amarillo); }
-        .emergency-banner { background: var(--rojo); color: white; padding: 15px; margin: 20px 0; border-radius: 8px; font-weight: bold; display: block; text-decoration: none; font-size: 1rem; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-weight: 900; }
+        .hero h1 span { color: #ffcc00; }
+        .emergency-banner { background: #e31e24; color: white; padding: 18px; margin: 20px 0; border-radius: 10px; font-weight: bold; display: block; text-decoration: none; font-size: 1.1rem; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
 
-        /* Bloques de Servicio */
         .container-servicios { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        .bloque { margin-bottom: 40px; background: var(--gris); border-radius: 15px; overflow: hidden; border-bottom: 5px solid var(--azul); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .img-box { width: 100%; height: 250px; background: #ddd; }
+        .bloque { margin-bottom: 50px; background: #f2f2f2; border-radius: 15px; overflow: hidden; border-bottom: 8px solid #004a99; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .img-box { width: 100%; height: 300px; background: #eee; }
         .img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .info { padding: 25px; text-align: center; }
-        .info h3 { color: var(--azul); font-size: 1.5rem; margin-bottom: 15px; }
+        
+        .info { padding: 30px; text-align: center; }
+        .info h3 { color: #004a99; font-size: 1.6rem; margin-bottom: 15px; font-weight: 900; }
         .lista { list-style: none; text-align: left; display: inline-block; }
-        .lista li { margin-bottom: 10px; font-weight: bold; padding-left: 30px; position: relative; }
-        .lista li::before { content: "✓"; color: var(--verde); position: absolute; left: 0; font-size: 20px; font-weight: bold; }
+        .lista li { margin-bottom: 12px; font-weight: bold; padding-left: 35px; position: relative; font-size: 1.1rem; }
+        .lista li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: #24d366; position: absolute; left: 0; font-size: 20px; }
 
-        /* Footer */
-        footer { background: var(--azul); color: white; padding: 30px 20px; text-align: center; margin-top: 40px; }
+        footer { background: #004a99; color: white; padding: 40px 20px; text-align: center; }
+        .ws-float { position: fixed; width: 65px; height: 65px; bottom: 30px; right: 30px; background-color: #24d366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; font-size: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 
-        /* Botón WhatsApp Flotante */
-        .ws-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background: var(--verde); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 30px; text-decoration: none; z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .hero h1 { font-size: 1.8rem; }
             .img-box { height: 200px; }
         }
@@ -59,7 +54,7 @@
 
     <section class="hero">
         <h1>Técnicos de <span>Neveras y Lavadoras</span></h1>
-        <p>Servicio a domicilio en Barranquilla</p>
+        <p>Servicio profesional a domicilio en Barranquilla</p>
         <a href="tel:+573045864731" class="emergency-banner">🚨 REPARACIÓN INMEDIATA - ¡LLAMA YA! 🚨</a>
     </section>
 
@@ -67,7 +62,7 @@
         <!-- Lavadoras -->
         <div class="bloque">
             <div class="img-box">
-                <img src="https://raw.githubusercontent.com/Juanp1981-boop/servicio-tecnico-express/main/img/lavadora.jpg" alt="Lavadoras">
+                <img src="img/lavadora.jpg" alt="Lavadoras">
             </div>
             <div class="info">
                 <h3>LAVADORAS</h3>
@@ -82,7 +77,7 @@
         <!-- Neveras -->
         <div class="bloque">
             <div class="img-box">
-                <img src="https://raw.githubusercontent.com/Juanp1981-boop/servicio-tecnico-express/main/img/nevera.jpg" alt="Neveras">
+                <img src="img/nevera.jpg" alt="Neveras">
             </div>
             <div class="info">
                 <h3>NEVERAS Y NEVECONES</h3>
@@ -98,7 +93,7 @@
     <footer>
         <p><strong>Multiservices SOS</strong></p>
         <p>Barranquilla y Área Metropolitana</p>
-        <p>© 2026 - Atendemos Urgencias 24/7</p>
+        <p>© 2026 - Atención 24/7 en Urgencias Técnicas</p>
     </footer>
 
     <a href="https://wa.me/573045864731?text=Hola%20Multiservices%20SOS,%20necesito%20técnico%20urgente" class="ws-float">
