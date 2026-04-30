@@ -7,336 +7,40 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantenimiento de Neveras y Lavadoras en Barranquilla | TecnicoYa</title>
-    <meta name="description" content="Reparación y mantenimiento de neveras y lavadoras en Barranquilla. Servicio técnico autorizado 24 Horas. ¡Llama ya al 3242375661 para asistencia técnica inmediata!">
+    <title>TecnicoYa | Reparación de Neveras y Lavadoras Barranquilla</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
         
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, rgba(0, 74, 153, 0.95) 0%, rgba(0, 90, 180, 0.95) 100%);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 0;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo img {
-            height: 80px;
-            width: auto;
-            max-width: 80px;
-            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
-        }
-        
-        .logo-text {
-            color: white;
-            font-size: 1.8em;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .logo-subtitle {
-            color: #ffcc00;
-            font-size: 0.9em;
-            font-weight: bold;
-            margin-top: 2px;
-            text-transform: uppercase;
-        }
-        
-        .header-phone {
-            background: #e31e24;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: all 0.3s ease;
-            border: 2px solid #e31e24;
-        }
-        
-        .header-phone:hover {
-            background: white;
-            color: #e31e24;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(227, 30, 36, 0.3);
-        }
-        
-        .header-phone::before {
-            content: "📞 ";
-            margin-right: 8px;
-            font-size: 1.1em;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #004a99 0%, #005ab4 100%);
-            color: white;
-            padding: 180px 0 80px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-            opacity: 0.3;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero h1 {
-            font-size: 3.2em;
-            margin-bottom: 20px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .hero h1 span {
-            color: #ffcc00;
-        }
-        
-        .hero .subtitle {
-            font-size: 1.4em;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .emergency-banner {
-            background: #e31e24;
-            color: white;
-            padding: 15px;
-            margin: 30px 0;
-            border-radius: 10px;
-            font-size: 1.2em;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(227, 30, 36, 0.3);
-            animation: pulse 2s infinite;
-            transition: all 0.3s ease;
-            display: block;
-        }
-        
-        .emergency-banner:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 20px rgba(227, 30, 36, 0.4);
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #25d366;
-            color: white;
-            padding: 18px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin: 20px 10px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .cta-button:hover {
-            background: #1eb956;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-        
-        .services h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #004a99;
-        }
-        
-        .services-subtitle {
-            text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 50px;
-            color: #666;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #004a99;
-        }
-        
-        .service-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #004a99;
-        }
-        
-        /* Trust Section */
-        .trust {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .trust h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 50px;
-            color: #004a99;
-        }
-        
-        .trust-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-        
-        .trust-item {
-            padding: 30px 20px;
-        }
-        
-        .trust-icon {
-            font-size: 4em;
-            color: #ffcc00;
-            margin-bottom: 20px;
-        }
-        
-        .trust-item h3 {
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            color: #004a99;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #004a99;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-        
-        .footer h3 {
-            margin-bottom: 20px;
-            color: #ffcc00;
-        }
-        
-        .footer p, .footer a {
-            color: #ccc;
-            text-decoration: none;
-        }
-        
-        /* WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
-            color: #fff;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
+        /* Header Limpio */
+        .header { background: #004a99; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 15px 0; border-bottom: 3px solid #ffcc00; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo-text { color: white; font-size: 1.8em; font-weight: bold; }
+        .logo-subtitle { color: #ffcc00; font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
+        .header-phone { background: #e31e24; color: white; padding: 10px 20px; text-decoration: none; border-radius: 30px; font-weight: bold; }
 
-        @media (max-width: 768px) {
-            .hero { padding: 220px 0 60px 0; }
-            .hero h1 { font-size: 2.2em; }
-            .logo-text { font-size: 1.4em; }
-            .header-phone { font-size: 1em; padding: 12px 25px; }
-            .cta-button { display: block; margin: 10px 0; }
-        }
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #004a99 0%, #005ab4 100%); color: white; padding: 160px 0 60px 0; text-align: center; }
+        .hero h1 { font-size: 3em; margin-bottom: 10px; font-weight: 900; }
+        .hero h1 span { color: #ffcc00; }
+        .hero .subtitle { font-size: 1.3em; margin-bottom: 30px; opacity: 0.9; }
+        
+        .emergency-banner { background: #e31e24; color: white; padding: 15px; margin: 20px 5%; border-radius: 10px; font-size: 1.1em; font-weight: bold; display: block; text-decoration: none; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
+        
+        /* Franja de Marcas */
+        .marcas-strip { background: rgba(255,255,255,0.1); padding: 20px 0; margin-bottom: 30px; border-top: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2); }
+        .marcas-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-weight: bold; font-size: 1.2em; color: white; opacity: 0.8; }
+
+        /* Botón Único de WhatsApp */
+        .cta-whatsapp { display: inline-block; background: #25d366; color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-size: 1.4em; font-weight: bold; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transition: 0.3s; }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+
+        /* WhatsApp Flotante */
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #fff; border-radius: 50px; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 100; animation: bounce 2s infinite; font-size: 30px; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2em; } .header-content { flex-direction: column; gap: 10px; } .marcas-container { gap: 15px; font-size: 0.9em; } }
     </style>
 </head>
 <body>
@@ -345,153 +49,39 @@
     <header class="header">
         <div class="header-content">
             <div class="logo">
-                <img src="https://i.ibb.co/7J3z0nGS/tu-imagen.png" alt="TecnicoYa Logo">
                 <div>
                     <div class="logo-text">TecnicoYa</div>
                     <div class="logo-subtitle">Mantenimiento de Línea Blanca</div>
                 </div>
             </div>
-            <a href="tel:+573242375661" class="header-phone">3242375661</a>
+            <a href="tel:+573242375661" class="header-phone">📞 324-237-5661</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Técnicos de <span>Neveras y Lavadoras</span></h1>
-                <p class="subtitle">Servicio profesional a domicilio en Barranquilla con garantía certificada</p>
-                
-                <a href="tel:+573242375661" class="emergency-banner" style="text-decoration: none; color: white;">
-                    🚨 ¿TU NEVERA NO ENFRÍA O TU LAVADORA NO EXPRIME? ¡ATENDEMOS YA! 🚨
-                </a>
-                
-                <a href="tel:+573242375661" class="cta-button" style="background: #ff6b35;">📞 Llamar Ahora: 324-237-5661</a>
-                <a href="https://wa.me/573242375661?text=Necesito%20mantenimiento%20urgente" class="cta-button" style="background: #25d366;">WhatsApp Técnico</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="services">
-        <div class="container">
-            <h2>Especialistas en Arreglo y Mantenimiento</h2>
-            <p class="services-subtitle">Soluciones definitivas para que tus electrodomésticos funcionen como nuevos</p>
+            <h1>Técnicos de <span>Neveras y Lavadoras</span></h1>
+            <p class="subtitle">Servicio a domicilio en Barranquilla con garantía certificada</p>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">❄️</div>
-                    <h3>Arreglo de Neveras</h3>
-                    <p>Reparación de compresores, carga de gas refrigerante y solución a problemas de enfriamiento. Todas las marcas.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🧺</div>
-                    <h3>Técnico de Lavadoras</h3>
-                    <p>Mantenimiento preventivo, cambio de transmisiones, bombas de agua y tarjetas electrónicas. Servicio 100% garantizado.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🧊</div>
-                    <h3>Nevecones Side by Side</h3>
-                    <p>Reparación de dispensadores de hielo, filtros de agua y sistemas de descongelación automática.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🔥</div>
-                    <h3>Secadoras y Torres</h3>
-                    <p>Limpieza de ductos, cambio de correas y sensores de calor para secadoras a gas o eléctricas.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Servicio Urgente</h3>
-                    <p>Entendemos la importancia de tus alimentos y ropa. Llegamos a tu domicilio en minutos para diagnósticos rápidos.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🛠️</div>
-                    <h3>Repuestos Originales</h3>
-                    <p>Solo instalamos componentes originales para asegurar la durabilidad de tu electrodoméstico.</p>
+            <a href="tel:+573242375661" class="emergency-banner">
+                🚨 ¿TU NEVERA NO ENFRÍA O TU LAVADORA NO EXPRIME? ¡ATENDEMOS YA! 🚨
+            </a>
+
+            <!-- Franja de Marcas Aliadas -->
+            <div class="marcas-strip">
+                <div class="marcas-container">
+                    <span>SAMSUNG</span> | <span>LG</span> | <span>WHIRLPOOL</span> | <span>MABE</span> | <span>BOSCH</span>
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 60px; padding: 40px; background: linear-gradient(45deg, #004a99, #e31e24); border-radius: 20px;">
-                <h3 style="color: white; font-size: 2em; margin-bottom: 20px;">¿Tu equipo falló hoy mismo?</h3>
-                <p style="color: white; font-size: 1.2em; margin-bottom: 25px;">No dejes pasar más tiempo. Nuestros técnicos están listos para la visita técnica.</p>
-                <a href="tel:+573242375661" class="cta-button" style="background: white; color: #004a99; font-size: 1.4em;">📞 AGENDAR TÉCNICO: 324-237-5661</a>
-            </div>
+            <a href="https://wa.me/573242375661?text=Necesito%20técnico%20urgente" class="cta-whatsapp">
+                WhatsApp Técnico Directo
+            </a>
         </div>
     </section>
 
-    <section class="trust">
-        <div class="container">
-            <h2>¿Por Qué Confiar en Nosotros?</h2>
-            
-            <div class="trust-features">
-                <div class="trust-item">
-                    <div class="trust-icon">⏱️</div>
-                    <h3>Atención el Mismo Día</h3>
-                    <p>Programamos tu visita inmediatamente. Servicio disponible en toda Barranquilla y Soledad.</p>
-                </div>
-                
-                <div class="trust-item">
-                    <div class="trust-icon">👨‍🔧</div>
-                    <h3>Expertos Certificados</h3>
-                    <p>Técnicos con amplia experiencia en marcas como Samsung, LG, Whirlpool y Mabe.</p>
-                </div>
-                
-                <div class="trust-item">
-                    <div class="trust-icon">📋</div>
-                    <h3>Presupuesto Justo</h3>
-                    <p>Evaluamos el daño y te damos un precio honesto antes de iniciar cualquier reparación.</p>
-                </div>
-                
-                <div class="trust-item">
-                    <div class="trust-icon">🛡️</div>
-                    <h3>Garantía por Escrito</h3>
-                    <p>Todas nuestras reparaciones de neveras y lavadoras incluyen garantía respaldada.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" style="background: linear-gradient(135deg, #e31e24 0%, #b3161b 100%); color: white; padding: 60px 0;">
-        <div class="container">
-            <div style="text-align: center; padding: 60px 20px;">
-                <h2 style="font-size: 3em; margin-bottom: 20px;">🚨 ¡REPARA TU EQUIPO HOY! 🚨</h2>
-                <p style="font-size: 1.4em; margin-bottom: 30px;">Estamos a 10 minutos de tu ubicación. ¡No permitas que tu comida se dañe!</p>
-                <a href="tel:+573242375661" class="cta-button" style="background: white; color: #e31e24; font-size: 1.8em; padding: 25px 60px; font-weight: 900;">📞 LLAMAR AL TÉCNICO</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h3>❄️ TecnicoYa Barranquilla</h3>
-                    <p>Especialistas en Mantenimiento de Lavadoras y Neveras</p>
-                    <p>Calle 92 # 46-31, Barranquilla</p>
-                </div>
-                <div>
-                    <h3>📞 Contacto Directo</h3>
-                    <p>Tel: <a href="tel:+573242375661">324-237-5661</a></p>
-                    <p>WhatsApp: <a href="https://wa.me/573242375661">324-237-5661</a></p>
-                </div>
-                <div>
-                    <h3>📍 Cobertura</h3>
-                    <p>Barranquilla, Soledad y Puerto Colombia</p>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 30px; color: #ccc;">
-                © 2026 TecnicoYa. Servicio técnico especializado. Todos los derechos reservados.
-            </p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/573242375661?text=Hola,%20necesito%20técnico%20de%20neveras/lavadoras" class="whatsapp-float" target="_blank">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2M12.05 20.15c-1.45 0-2.87-.38-4.11-1.1l-.3-.17-3.12.82.83-3.04-.2-.31c-.8-1.27-1.22-2.74-1.22-4.25 0-4.39 3.57-7.96 7.96-7.96s7.96 3.57 7.96 7.96c0 4.39-3.57 7.96-7.96 7.96M17.33 14.45c-.23-.12-1.39-.69-1.6-.77-.22-.08-.38-.12-.54.12-.16.25-.61.77-.75.93-.14.16-.29.18-.53.06-.24-.12-1.01-.37-1.92-1.18-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.25.24-.41.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.25-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.39-.57 1.58-1.11.2-.54.2-1.01.14-1.11-.06-.09-.22-.15-.45-.27z"/>
-        </svg>
+    <a href="https://wa.me/573242375661" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 </body>
 </html>
