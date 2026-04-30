@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Técnico de Línea Blanca en Barranquilla | TecnicoYa</title>
+    <title>Técnico Línea Blanca Barranquilla | TecnicoYa</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --azul: #004aad; --amarillo: #ffde59; --rojo: #ff3131; }
-        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #fff; }
+        :root { --azul: #004aad; --amarillo: #ffde59; --rojo: #ff3131; --bg: #f8f9fa; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; color: #333; }
         
-        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--azul); }
-        .logo { font-family: 'Montserrat', sans-serif; color: var(--azul); font-size: 1.8rem; font-weight: 800; }
+        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--azul); sticky; top:0; z-index:1000;}
+        .logo { font-family: 'Montserrat', sans-serif; color: var(--azul); font-size: 1.6rem; font-weight: 800; }
         .logo span { color: var(--rojo); }
 
-        /* HERO - LÍNEA BLANCA */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581092921461-7d15cb48a6ef?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover; background-position: center;
-            color: white; padding: 90px 5%; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1581092921461-7d15cb48a6ef?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center; color: white; padding: 80px 5%; text-align: center;
         }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin: 0; }
-        .highlight { color: var(--amarillo); }
+        
+        .grid-equipos { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; padding: 50px 5%; max-width: 1200px; margin: auto; 
+        }
 
-        .btn-wa { background: #25d366; color: white; padding: 20px 40px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.4rem; display: inline-block; margin-top: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .card-equipo { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-bottom: 5px solid var(--azul); }
+        .card-equipo img { width: 100%; height: 220px; object-fit: cover; transition: 0.3s; }
+        .card-equipo:hover img { transform: scale(1.05); }
+        .card-info { padding: 20px; text-align: center; }
+        .card-info h3 { margin: 0 0 10px; font-family: 'Montserrat'; font-size: 1.2rem; color: var(--azul); }
 
-        /* SECCIÓN TÉCNICA */
-        .servicios { padding: 50px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: auto; }
-        .card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-        .card-body { padding: 20px; }
-
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+        .btn-wa { background: #25d366; color: white; padding: 18px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 20px; }
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 1000; }
     </style>
 </head>
 <body>
@@ -41,33 +42,50 @@
 </header>
 
 <section class="hero">
-    <h1>SERVICIO TÉCNICO DE <span class="highlight">LÍNEA BLANCA</span></h1>
-    <p>Reparación de Lavadoras, Neveras y Secadoras en Barranquilla.<br> 
-    <strong>Técnicos Certificados - Servicio Hoy Mismo.</strong></p>
-    <a href="https://wa.me/573000000000?text=Hola,%20necesito%20servicio%20tecnico%20de%20linea%20blanca" class="btn-wa">AGENDAR POR WHATSAPP</a>
+    <h1>REPARACIÓN EXPERTA DE <span style="color:var(--amarillo)">LÍNEA BLANCA</span></h1>
+    <p>Atención inmediata en Barranquilla para todo tipo de electrodomésticos.</p>
+    <a href="https://wa.me/573000000000" class="btn-wa">SOLICITAR SERVICIO HOY</a>
 </section>
 
-<section class="servicios">
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=2071&auto=format&fit=crop" alt="Reparación de Lavadoras">
-        <div class="card-body">
-            <h3>Lavadoras y Secadoras</h3>
-            <p>Reparación de tarjetas, motores y mantenimiento general.</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1571175432291-fe44d5672684?q=80&w=2070&auto=format&fit=crop" alt="Servicio de Neveras">
-        <div class="card-body">
-            <h3>Neveras y Nevecones</h3>
-            <p>Carga de gas refrigerante, cambio de bimetálico y sensores.</p>
-        </div>
-    </div>
-</section>
+<h2 style="text-align:center; margin-top:40px; font-family:'Montserrat';">EQUIPOS QUE ATENDEMOS</h2>
 
-<a href="https://wa.me/573000000000" class="whatsapp-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" alt="WA">
+<div class="grid-equipos">
+    <!-- LAVADORAS -->
+    <div class="card-equipo">
+        <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=500" alt="Lavadora Carga Frontal">
+        <div class="card-info"><h3>Lavadoras Carga Frontal</h3><p>Reparación de sellos, rodamientos y tarjetas.</p></div>
+    </div>
+    <div class="card-equipo">
+        <img src="https://images.unsplash.com/photo-1545173168-9f1947e96a36?q=80&w=500" alt="Lavadora Carga Superior">
+        <div class="card-info"><h3>Lavadoras Carga Superior</h3><p>Mantenimiento de transmisión y bombas de drenaje.</p></div>
+    </div>
+    <div class="card-equipo">
+        <img src="https://images.unsplash.com/photo-1510539139734-183447675e46?q=80&w=500" alt="Torres de Lavado">
+        <div class="card-info"><h3>Torres de Lavado</h3><p>Servicio integral para lavadora y secadora acoplada.</p></div>
+    </div>
+
+    <!-- NEVERAS -->
+    <div class="card-equipo">
+        <img src="https://images.unsplash.com/photo-1571175432291-fe44d5672684?q=80&w=500" alt="Neveras Nevecones">
+        <div class="card-info"><h3>Nevecones (Side by Side)</h3><p>Reparación de dispensadores de hielo y compresores.</p></div>
+    </div>
+    <div class="card-equipo">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=500" alt="Neveras Convencionales">
+        <div class="card-info"><h3>Neveras Convencionales</h3><p>Carga de gas y cambio de termostatos.</p></div>
+    </div>
+    <div class="card-equipo">
+        <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?q=80&w=500" alt="Cavas y Enfriadores">
+        <div class="card-info"><h3>Cavas y Enfriadores</h3><p>Especialistas en sistemas de enfriamiento comercial.</p></div>
+    </div>
+</div>
+
+<footer style="background:#222; color:#fff; text-align:center; padding: 40px;">
+    <p><strong>TECNICOYA BARRANQUILLA</strong><br>Expertos en Samsung, LG, Whirlpool y más.</p>
+</footer>
+
+<a href="https://wa.me/573000000000" class="wa-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
 </a>
 
 </body>
 </html>
-
