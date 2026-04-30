@@ -3,91 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECNICOYA | Línea Blanca Barranquilla</title>
+    <title>TECNICOYA | Servicio Técnico Barranquilla</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #24d366; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; color: #333; background: #fff; }
+        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #24d366; --gris: #f2f2f2; }
         
-        header { display: flex; justify-content: space-between; padding: 20px 8%; align-items: center; border-bottom: 2px solid var(--amarillo); }
-        .logo { font-size: 32px; font-weight: 900; color: var(--azul); }
+        body { font-family: 'Helvetica', Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; overflow-x: hidden; }
+
+        /* Header Adaptable */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #fff; border-bottom: 3px solid var(--amarillo); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: clamp(20px, 5vw, 28px); font-weight: 900; color: var(--azul); }
         .logo span { color: var(--rojo); }
-        .cta-header { background: var(--rojo); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+        .btn-call { background: var(--rojo); color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
-        .titulo-principal { text-align: center; color: var(--azul); font-size: 45px; text-transform: uppercase; font-weight: 900; margin-bottom: 80px; }
+        .main-container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; color: var(--azul); font-size: clamp(24px, 6vw, 36px); text-transform: uppercase; margin: 30px 0; }
 
-        /* Estructura de Bloque Largo */
-        .bloque-servicio { display: flex; align-items: center; gap: 50px; margin-bottom: 100px; flex-wrap: wrap; }
-        .bloque-servicio:nth-child(even) { flex-direction: row-reverse; }
+        /* BLOQUES VERTICALES RESPONSIVE */
+        .bloque-servicio { margin-bottom: 50px; display: flex; flex-direction: column; width: 100%; }
 
-        .imagen-lado { flex: 1; min-width: 350px; height: 450px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .imagen-lado img { width: 100%; height: 100%; object-fit: cover; }
+        /* Imagen Real con Proporción de Pantalla */
+        .contenedor-foto { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 15px 15px 0 0; background: #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .contenedor-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-        .tarjeta-lado { flex: 1; min-width: 350px; background: #f9f9f9; padding: 50px; border-radius: 20px; border-left: 10px solid var(--azul); }
-        .tarjeta-lado h3 { color: var(--azul); font-size: 32px; margin-top: 0; text-transform: uppercase; }
-        
-        .lista-pros { list-style: none; padding: 0; margin: 30px 0; }
-        .lista-pros li { font-size: 19px; font-weight: 600; margin-bottom: 15px; padding-left: 40px; position: relative; }
-        .lista-pros li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--verde); position: absolute; left: 0; font-size: 22px; }
+        /* Tarjeta de Detalles */
+        .tarjeta-info { background: var(--gris); padding: 30px 20px; border-radius: 0 0 15px 15px; border-bottom: 8px solid var(--azul); box-sizing: border-box; }
+        .tarjeta-info h2 { color: var(--azul); margin: 0 0 10px; font-size: 24px; text-align: center; }
+        .tarjeta-info p { text-align: center; font-weight: bold; color: #555; margin-bottom: 20px; }
 
-        .btn-ws-card { background: var(--verde); color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; }
+        /* Lista de Checks para Móviles */
+        .lista-checks { list-style: none; padding: 0; margin: 0 auto; max-width: 300px; }
+        .lista-checks li { margin-bottom: 12px; font-size: clamp(16px, 4vw, 18px); font-weight: 600; padding-left: 35px; position: relative; }
+        .lista-checks li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--verde); position: absolute; left: 0; font-size: 20px; }
 
-        .ws-float { position: fixed; bottom: 30px; right: 30px; background: var(--verde); width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 1000; }
+        /* Botón de Acción Directa */
+        .btn-ws { display: block; background: var(--verde); color: white; text-align: center; padding: 15px; margin-top: 25px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; box-shadow: 0 4px 10px rgba(36, 211, 102, 0.3); }
 
-        @media (max-width: 768px) {
-            .bloque-servicio { text-align: center; }
-            .imagen-lado { height: 300px; }
-            .tarjeta-lado { border-left: 0; border-top: 10px solid var(--azul); }
+        /* WhatsApp Flotante */
+        .ws-float { position: fixed; bottom: 20px; right: 20px; background: var(--verde); width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 35px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
+
+        @media (max-width: 480px) {
+            .tarjeta-info { padding: 20px 15px; }
+            .btn-call { font-size: 12px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">TECNICO<span>YA</span></div>
-        <a href="tel:+573000000000" class="cta-header"><i class="fas fa-phone-alt"></i> LLAMAR AHORA</a>
-    </header>
+<header>
+    <div class="logo">TECNICO<span>YA</span></div>
+    <a href="tel:+573000000000" class="btn-call"><i class="fas fa-phone-alt"></i> LLAMAR YA</a>
+</header>
 
-    <div class="container">
-        <h2 class="titulo-principal">Nuestros Servicios Especializados</h2>
+<div class="main-container">
+    <h1>Nuestros Servicios</h1>
 
-        <!-- BLOQUE 1: LAVADORAS -->
-        <div class="bloque-servicio">
-            <div class="imagen-lado">
-                <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?q=80&w=800" alt="Lavadoras">
-            </div>
-            <div class="tarjeta-lado">
-                <h3>Servicio de Lavadoras</h3>
-                <p>Reparamos todas las marcas con técnicos certificados en Barranquilla.</p>
-                <ul class="lista-pros">
-                    <li>Carga Frontal y Superior</li>
-                    <li>Torres de Lavado Profesionales</li>
-                    <li>Secadoras a Gas y Eléctricas</li>
-                </ul>
-                <a href="https://wa.me/573000000000" class="btn-ws-card">COTIZAR POR WHATSAPP</a>
-            </div>
+    <!-- Bloque Lavadoras -->
+    <div class="bloque-servicio">
+        <div class="contenedor-foto">
+            <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?auto=format&fit=crop&q=80&w=1000" alt="Lavadoras">
         </div>
-
-        <!-- BLOQUE 2: NEVERAS -->
-        <div class="bloque-servicio">
-            <div class="imagen-lado">
-                <img src="https://images.unsplash.com/photo-1571175452282-f56e70b3c7c7?q=80&w=800" alt="Neveras">
-            </div>
-            <div class="tarjeta-lado">
-                <h3>Neveras y Nevecones</h3>
-                <p>Atención inmediata para que no pierdas tus alimentos. Repuestos 100% originales.</p>
-                <ul class="lista-pros">
-                    <li>Nevecones Side by Side</li>
-                    <li>Mantenimiento de Sistemas Inverter</li>
-                    <li>Carga de Gas Refrigerante</li>
-                </ul>
-                <a href="https://wa.me/573000000000" class="btn-ws-card">SOLICITAR TÉCNICO</a>
-            </div>
+        <div class="tarjeta-info">
+            <h2>LAVADORAS</h2>
+            <p>Técnicos expertos en todas las marcas.</p>
+            <ul class="lista-checks">
+                <li>Carga Frontal / Superior</li>
+                <li>Torres de Lavado</li>
+                <li>Secadoras a Gas / Eléctricas</li>
+            </ul>
+            <a href="https://wa.me/573000000000" class="btn-ws"><i class="fab fa-whatsapp"></i> COTIZAR POR WHATSAPP</a>
         </div>
     </div>
 
-    <a href="https://wa.me/573000000000" class="ws-float"><i class="fab fa-whatsapp"></i></a>
+    <!-- Bloque Neveras -->
+    <div class="bloque-servicio">
+        <div class="contenedor-foto">
+            <img src="https://images.unsplash.com/photo-1571175452282-f56e70b3c7c7?auto=format&fit=crop&q=80&w=1000" alt="Neveras">
+        </div>
+        <div class="tarjeta-info">
+            <h2>NEVERAS Y NEVECONES</h2>
+            <p>Reparación inmediata a domicilio.</p>
+            <ul class="lista-checks">
+                <li>Nevecones Side by Side</li>
+                <li>Sistemas Inverter</li>
+                <li>Carga de Gas Refrigerante</li>
+            </ul>
+            <a href="https://wa.me/573000000000" class="btn-ws"><i class="fab fa-whatsapp"></i> AGENDAR VISITA</a>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/573000000000" class="ws-float">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
