@@ -3,83 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Técnico Línea Blanca Barranquilla | TecnicoYa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Catálogo de Lavadoras Industriales | Expertos en Google Ads</title>
     <style>
-        :root { --azul: #004aad; --amarillo: #ffde59; --rojo: #ff3131; }
-        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #fff; }
-        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--azul); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Montserrat', sans-serif; color: var(--azul); font-size: 1.8rem; }
-        .logo span { color: var(--rojo); }
-        
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/commons/b/b5/Laundry_room_with_washing_machine_and_dryer.jpg'); 
-            background-size: cover; background-position: center; color: #fff; padding: 100px 5%; text-align: center; 
+        /* Estilos Base para asegurar conversión */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
         }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin: 0; text-transform: uppercase; }
-        .btn-wa { background: #25d366; color: #fff; padding: 20px 40px; border-radius: 10px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 25px; font-size: 1.4rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-
-        .section-title { text-align: center; font-family: 'Montserrat'; font-size: 2.2rem; margin: 50px 0 30px; color: var(--azul); }
-        
-        .grid-equipos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 20px 5%; max-width: 1300px; margin: auto; }
-        .card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-bottom: 6px solid var(--azul); }
-        .card img { width: 100%; height: 280px; object-fit: cover; }
-        .card-body { padding: 25px; text-align: center; }
-        .card h3 { margin: 0 0 10px; font-family: 'Montserrat'; color: var(--azul); }
-
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(0,0,0,0.4); z-index: 1000; }
-        footer { background: #222; color: #fff; text-align: center; padding: 40px; margin-top: 50px; }
+        h2 {
+            text-align: center;
+            color: #002e5b;
+            margin-bottom: 30px;
+        }
+        /* Grid de Productos */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Tarjetas de Producto */
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #0056b3;
+        }
+        .product-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+            height: 40px;
+        }
+        /* Botón de Conversión (Lead Gen) */
+        .btn-cotizar {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn-cotizar:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">TECNICO<span>YA</span></div>
-    <a href="tel:+573000000000" style="color:var(--rojo); font-weight:bold; text-decoration:none; font-size:1.2rem;">📞 LLAMAR AHORA</a>
-</header>
+    <h2>Catálogo de Equipos de Lavado Industrial</h2>
 
-<section class="hero">
-    <h1>REPARACIÓN DE <span style="color:var(--amarillo)">LÍNEA BLANCA</span></h1>
-    <p>Servicio Técnico de Lavadoras y Neveras en Barranquilla con Garantía Real.</p>
-    <a href="https://wa.me/573000000000?text=Hola,%20necesito%20servicio%20tecnico" class="btn-wa">SOLICITAR TÉCNICO AHORA</a>
-</section>
-
-<h2 class="section-title">EQUIPOS ESPECIALIZADOS</h2>
-
-<div class="grid-equipos">
-    <!-- LAVADORA -->
-    <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Washing_machine_with_open_door.jpg" alt="Lavadora">
-        <div class="card-body">
-            <h3>LAVADORAS</h3>
-            <p>Mantenimiento de motores, tarjetas y transmisiones de todas las marcas.</p>
+    <section class="product-grid">
+        <!-- Lavadora 1 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=400" alt="Lavadora Carga Frontal HE">
+            <h3>Carga Frontal High-Efficiency</h3>
+            <p>Optimización máxima de agua y energía para leads residenciales.</p>
+            <a href="#" class="btn-cotizar" data-product="Frontal-HE">Cotizar Ahora</a>
         </div>
-    </div>
-    <!-- NEVERA -->
-    <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Refrigerator_interior.jpg" alt="Nevera">
-        <div class="card-body">
-            <h3>NEVERAS Y NEVECONES</h3>
-            <p>Carga de gas refrigerante, cambio de compresores y reparación de dispensadores.</p>
-        </div>
-    </div>
-    <!-- SECADORA/TECNICO -->
-    <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Appliance_repair_tools.jpg" alt="Servicio Técnico">
-        <div class="card-body">
-            <h3>TÉCNICOS EXPERTOS</h3>
-            <p>Atención inmediata en Barranquilla con repuestos 100% originales.</p>
-        </div>
-    </div>
-</div>
 
-<footer>
-    <p><strong>TECNICOYA BARRANQUILLA</strong><br>Expertos en Samsung, LG, Whirlpool, Mabe y más.<br>© 2026</p>
-</footer>
+        <!-- Lavadora 2 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&q=80&w=400" alt="Lavadora Carga Superior Ultra">
+            <h3>Carga Superior Ultra-Capacity</h3>
+            <p>Estructura robusta diseñada para alto volumen de lavado.</p>
+            <a href="#" class="btn-cotizar" data-product="Superior-Ultra">Cotizar Ahora</a>
+        </div>
 
-<a href="https://wa.me/573000000000" class="wa-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" alt="WA">
-</a>
+        <!-- Lavadora 3 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?auto=format&fit=crop&q=80&w=400" alt="Centro de Lavado Stacked">
+            <h3>Centro de Lavado (Stacked)</h3>
+            <p>Solución compacta para optimizar el espacio en negocios B2B.</p>
+            <a href="#" class="btn-cotizar" data-product="Centro-Lavado">Cotizar Ahora</a>
+        </div>
+
+        <!-- Lavadora 4 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400" alt="Lavadora Grado Comercial">
+            <h3>Industrial Grado Comercial</h3>
+            <p>Máxima durabilidad para operaciones industriales 24/7.</p>
+            <a href="#" class="btn-cotizar" data-product="Industrial-B2B">Cotizar Ahora</a>
+        </div>
+    </section>
 
 </body>
 </html>
