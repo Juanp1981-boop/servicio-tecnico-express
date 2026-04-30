@@ -3,117 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Lavadoras Industriales | Expertos en Google Ads</title>
+    <title>TecnicoYa | Reparación en Barranquilla</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Estilos Base para asegurar conversión */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        h2 {
-            text-align: center;
-            color: #002e5b;
-            margin-bottom: 30px;
-        }
-        /* Grid de Productos */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        /* Tarjetas de Producto */
-        .product-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            text-align: center;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        .product-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        .product-card h3 {
-            font-size: 1.2rem;
-            margin: 10px 0;
-            color: #0056b3;
-        }
-        .product-card p {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.4;
-            height: 40px;
-        }
-        /* Botón de Conversión (Lead Gen) */
-        .btn-cotizar {
-            display: inline-block;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            cursor: pointer;
-            margin-top: 15px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .btn-cotizar:hover {
-            background-color: #218838;
-        }
+        /* Estilos alineados con image_c9754d.png */
+        body { font-family: 'Arial Black', Gadget, sans-serif; margin: 0; padding: 0; background-color: #fff; }
+        
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #fff; }
+        .logo { font-size: 30px; font-weight: 900; color: #004a99; letter-spacing: -1px; }
+        .logo span { color: #e31e24; }
+        .llamar { color: #e31e24; font-weight: bold; text-decoration: none; font-size: 1.2rem; display: flex; align-items: center; }
+
+        .hero { background-color: #444; color: white; text-align: center; padding: 70px 20px; }
+        .hero h1 { font-size: 55px; margin: 0; text-transform: uppercase; font-weight: 900; }
+        .hero h1 span { color: #ffcc00; }
+        .hero p { font-size: 20px; margin: 20px 0; font-family: Arial, sans-serif; }
+        
+        .btn-cta { background-color: #24d366; color: white; padding: 20px 45px; font-size: 26px; font-weight: bold; text-decoration: none; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+        .seccion-equipos { padding: 60px 5%; text-align: center; }
+        .seccion-equipos h2 { color: #004a99; font-size: 42px; font-weight: 900; text-transform: uppercase; margin-bottom: 50px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1250px; margin: 0 auto; }
+        
+        .card { background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; border-bottom: 10px solid #004a99; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 260px; object-fit: cover; }
+        .card-info { padding: 30px; }
+        .card-info h3 { color: #004a99; font-size: 24px; margin: 0 0 15px 0; font-weight: 900; }
+        .card-info p { color: #333; font-size: 17px; line-height: 1.4; font-family: Arial, sans-serif; }
+
+        .ws-float { position: fixed; bottom: 25px; right: 25px; background: #24d366; width: 75px; height: 75px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 45px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); text-decoration: none; z-index: 1000; }
     </style>
 </head>
 <body>
 
-    <h2>Catálogo de Equipos de Lavado Industrial</h2>
+    <header>
+        <div class="logo">TECNICO<span>YA</span></div>
+        <a href="tel:+573000000000" class="llamar"><i class="fas fa-phone-alt"></i> &nbsp;LLAMAR AHORA</a>
+    </header>
 
-    <section class="product-grid">
-        <!-- Lavadora 1 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=400" alt="Lavadora Carga Frontal HE">
-            <h3>Carga Frontal High-Efficiency</h3>
-            <p>Optimización máxima de agua y energía para leads residenciales.</p>
-            <a href="#" class="btn-cotizar" data-product="Frontal-HE">Cotizar Ahora</a>
-        </div>
+    <section class="hero">
+        <h1>REPARACIÓN DE <span>LÍNEA BLANCA</span></h1>
+        <p>Servicio Técnico de Lavadoras y Neveras en Barranquilla con Garantía Real.</p>
+        <a href="https://wa.me/573000000000" class="btn-cta">SOLICITAR TÉCNICO AHORA</a>
+    </section>
 
-        <!-- Lavadora 2 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&q=80&w=400" alt="Lavadora Carga Superior Ultra">
-            <h3>Carga Superior Ultra-Capacity</h3>
-            <p>Estructura robusta diseñada para alto volumen de lavado.</p>
-            <a href="#" class="btn-cotizar" data-product="Superior-Ultra">Cotizar Ahora</a>
-        </div>
-
-        <!-- Lavadora 3 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?auto=format&fit=crop&q=80&w=400" alt="Centro de Lavado Stacked">
-            <h3>Centro de Lavado (Stacked)</h3>
-            <p>Solución compacta para optimizar el espacio en negocios B2B.</p>
-            <a href="#" class="btn-cotizar" data-product="Centro-Lavado">Cotizar Ahora</a>
-        </div>
-
-        <!-- Lavadora 4 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400" alt="Lavadora Grado Comercial">
-            <h3>Industrial Grado Comercial</h3>
-            <p>Máxima durabilidad para operaciones industriales 24/7.</p>
-            <a href="#" class="btn-cotizar" data-product="Industrial-B2B">Cotizar Ahora</a>
+    <section class="seccion-equipos">
+        <h2>EQUIPOS ESPECIALIZADOS</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?q=80&w=800" alt="Lavadoras">
+                <div class="card-info">
+                    <h3>LAVADORAS</h3>
+                    <p>Mantenimiento de motores, tarjetas y transmisiones de todas las marcas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1571175452282-f56e70b3c7c7?q=80&w=800" alt="Neveras">
+                <div class="card-info">
+                    <h3>NEVERAS Y NEVECONES</h3>
+                    <p>Carga de gas refrigerante, cambio de compresores y reparación de dispensadores.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800" alt="Técnicos">
+                <div class="card-info">
+                    <h3>TÉCNICOS EXPERTOS</h3>
+                    <p>Atención inmediata en Barranquilla con repuestos 100% originales.</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <a href="https://wa.me/573000000000" class="ws-float"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
