@@ -3,67 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnicoYa | Barranquilla</title>
+    <title>TECNICOYA | Línea Blanca Barranquilla</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --azul: #004a99; --verde: #24d366; --gris: #f2f2f2; }
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; }
-        header { display: flex; justify-content: space-between; padding: 15px 5%; align-items: center; border-bottom: 1px solid #ddd; }
-        .logo { font-size: 28px; font-weight: 900; color: var(--azul); }
-        .logo span { color: #e31e24; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        .bloque { margin-bottom: 60px; display: flex; flex-direction: column; }
-        .img-box { width: 100%; height: 350px; background: #333; overflow: hidden; border-radius: 15px 15px 0 0; }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; }
-        .info-card { background: var(--gris); padding: 40px; border-radius: 0 0 15px 15px; border-bottom: 8px solid var(--azul); }
-        h3 { color: var(--azul); font-size: 30px; text-align: center; margin: 0 0 15px; font-weight: 900; }
-        .lista { list-style: none; padding: 0; margin: 0 auto; max-width: 400px; }
-        .lista li { margin-bottom: 12px; font-size: 18px; font-weight: bold; padding-left: 35px; position: relative; }
-        .lista li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--verde); position: absolute; left: 0; }
-        .ws-float { position: fixed; bottom: 20px; right: 20px; background: var(--verde); width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 35px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #24d366; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; color: #333; background: #fff; }
+        
+        header { display: flex; justify-content: space-between; padding: 20px 8%; align-items: center; border-bottom: 2px solid var(--amarillo); }
+        .logo { font-size: 32px; font-weight: 900; color: var(--azul); }
+        .logo span { color: var(--rojo); }
+        .cta-header { background: var(--rojo); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .titulo-principal { text-align: center; color: var(--azul); font-size: 45px; text-transform: uppercase; font-weight: 900; margin-bottom: 80px; }
+
+        /* Estructura de Bloque Largo */
+        .bloque-servicio { display: flex; align-items: center; gap: 50px; margin-bottom: 100px; flex-wrap: wrap; }
+        .bloque-servicio:nth-child(even) { flex-direction: row-reverse; }
+
+        .imagen-lado { flex: 1; min-width: 350px; height: 450px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .imagen-lado img { width: 100%; height: 100%; object-fit: cover; }
+
+        .tarjeta-lado { flex: 1; min-width: 350px; background: #f9f9f9; padding: 50px; border-radius: 20px; border-left: 10px solid var(--azul); }
+        .tarjeta-lado h3 { color: var(--azul); font-size: 32px; margin-top: 0; text-transform: uppercase; }
+        
+        .lista-pros { list-style: none; padding: 0; margin: 30px 0; }
+        .lista-pros li { font-size: 19px; font-weight: 600; margin-bottom: 15px; padding-left: 40px; position: relative; }
+        .lista-pros li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--verde); position: absolute; left: 0; font-size: 22px; }
+
+        .btn-ws-card { background: var(--verde); color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; }
+
+        .ws-float { position: fixed; bottom: 30px; right: 30px; background: var(--verde); width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 1000; }
+
+        @media (max-width: 768px) {
+            .bloque-servicio { text-align: center; }
+            .imagen-lado { height: 300px; }
+            .tarjeta-lado { border-left: 0; border-top: 10px solid var(--azul); }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">TECNICO<span>YA</span></div>
-    <a href="tel:+573000000000" style="color:#e31e24; font-weight:bold; text-decoration:none; border:2px solid #e31e24; padding:5px 10px; border-radius:5px;">LLAMAR YA</a>
-</header>
+    <header>
+        <div class="logo">TECNICO<span>YA</span></div>
+        <a href="tel:+573000000000" class="cta-header"><i class="fas fa-phone-alt"></i> LLAMAR AHORA</a>
+    </header>
 
-<div class="container">
-    <!-- BLOQUE LAVADORAS -->
-    <div class="bloque">
-        <div class="img-box">
-            <!-- Imagen en Base64 para que cargue SÍ O SÍ -->
-            <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=800" alt="Lavadoras">
+    <div class="container">
+        <h2 class="titulo-principal">Nuestros Servicios Especializados</h2>
+
+        <!-- BLOQUE 1: LAVADORAS -->
+        <div class="bloque-servicio">
+            <div class="imagen-lado">
+                <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?q=80&w=800" alt="Lavadoras">
+            </div>
+            <div class="tarjeta-lado">
+                <h3>Servicio de Lavadoras</h3>
+                <p>Reparamos todas las marcas con técnicos certificados en Barranquilla.</p>
+                <ul class="lista-pros">
+                    <li>Carga Frontal y Superior</li>
+                    <li>Torres de Lavado Profesionales</li>
+                    <li>Secadoras a Gas y Eléctricas</li>
+                </ul>
+                <a href="https://wa.me/573000000000" class="btn-ws-card">COTIZAR POR WHATSAPP</a>
+            </div>
         </div>
-        <div class="info-card">
-            <h3>LAVADORAS</h3>
-            <ul class="lista">
-                <li>Carga Frontal / Superior</li>
-                <li>Torres de Lavado</li>
-                <li>Secadoras a Gas / Eléctricas</li>
-            </ul>
+
+        <!-- BLOQUE 2: NEVERAS -->
+        <div class="bloque-servicio">
+            <div class="imagen-lado">
+                <img src="https://images.unsplash.com/photo-1571175452282-f56e70b3c7c7?q=80&w=800" alt="Neveras">
+            </div>
+            <div class="tarjeta-lado">
+                <h3>Neveras y Nevecones</h3>
+                <p>Atención inmediata para que no pierdas tus alimentos. Repuestos 100% originales.</p>
+                <ul class="lista-pros">
+                    <li>Nevecones Side by Side</li>
+                    <li>Mantenimiento de Sistemas Inverter</li>
+                    <li>Carga de Gas Refrigerante</li>
+                </ul>
+                <a href="https://wa.me/573000000000" class="btn-ws-card">SOLICITAR TÉCNICO</a>
+            </div>
         </div>
     </div>
 
-    <!-- BLOQUE NEVERAS -->
-    <div class="bloque">
-        <div class="img-box">
-            <img src="https://images.unsplash.com/photo-1571175452282-f56e70b3c7c7?auto=format&fit=crop&q=80&w=800" alt="Neveras">
-        </div>
-        <div class="info-card">
-            <h3>NEVERAS Y NEVECONES</h3>
-            <ul class="lista">
-                <li>Nevecones Side by Side</li>
-                <li>Sistemas Inverter</li>
-                <li>Cargas de Gas R134 / R600</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<a href="https://wa.me/573000000000" class="ws-float"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/573000000000" class="ws-float"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
