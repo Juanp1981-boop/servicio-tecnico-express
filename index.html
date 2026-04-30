@@ -3,53 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Técnico Ya | Barranquilla</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Mantenimiento de Lavadoras en Barranquilla | TecnicoYa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <style>
-        .btn-urgencia { animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        :root { --azul: #004aad; --amarillo: #ffde59; --rojo: #ff3131; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; }
+        
+        /* HEADER ESTILO PROFESIONAL */
+        header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; }
+        .logo { font-family: 'Montserrat', sans-serif; color: var(--azul); font-size: 1.5rem; }
+        .phone-top { color: var(--rojo); font-weight: bold; font-size: 1.2rem; text-decoration: none; }
+
+        /* HERO CON CONTEXTO DIRECTO */
+        .hero { 
+            background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.8)), url('lavadora.jfif');
+            background-size: cover; background-position: center;
+            color: white; padding: 80px 5%; text-align: center;
+        }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin: 0; text-transform: uppercase; line-height: 1.1; }
+        .hero p { font-size: 1.3rem; margin: 20px 0; font-weight: 300; }
+        .hero .highlight { color: var(--amarillo); font-weight: 800; }
+
+        .cta-container { display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 30px; }
+        .btn-wa { background: #25d366; color: white; padding: 18px 35px; border-radius: 50px; font-weight: bold; text-decoration: none; font-size: 1.3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .btn-call { background: var(--amarillo); color: #000; padding: 15px 30px; border-radius: 50px; font-weight: bold; text-decoration: none; }
+
+        /* SECCIÓN DE BENEFICIOS (Igual que la URL de referencia) */
+        .beneficios { padding: 40px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; background: #f9f9f9; text-align: center; }
+        .ben-item { padding: 20px; }
+        .ben-item h3 { color: var(--azul); margin-bottom: 5px; }
+
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 100; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body>
 
-    <a href="https://wa.me/573045864731" class="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center w-16 h-16 btn-urgencia">
-        <i class="fab fa-whatsapp text-4xl"></i>
-    </a>
+<header>
+    <div class="logo">TECNICO<span style="color:var(--rojo)">YA</span></div>
+    <a href="tel:+573000000000" class="phone-top">📞 LLAMAR AHORA</a>
+</header>
 
-    <header class="bg-blue-800 text-white py-6 text-center shadow-lg border-b-8 border-yellow-400">
-        <h1 class="text-3xl font-black uppercase italic tracking-tighter text-white">TÉCNICO YA BARRANQUILLA</h1>
-        <a href="tel:+573045864731" class="text-2xl font-bold mt-2 block text-yellow-300">
-            <i class="fas fa-phone-alt mr-2"></i> 304 586 4731
-        </a>
-    </header>
+<section class="hero">
+    <h1>Mantenimiento de <span class="highlight">Lavadoras en Barranquilla</span></h1>
+    <p>Servicio Técnico Especializado a Domicilio. <br> 
+       <strong>¡Reparamos hoy mismo con Repuestos Originales!</strong></p>
+    
+    <div class="cta-container">
+        <a href="https://wa.me/573000000000?text=Hola,%20necesito%20mantenimiento%20para%20mi%20lavadora" class="btn-wa">SOLICITAR TÉCNICO POR WHATSAPP</a>
+        <a href="tel:+573000000000" class="btn-call">O LLAMAR AL TELÉFONO DIRECTO</a>
+    </div>
+</section>
 
-    <main class="p-4 max-w-lg mx-auto space-y-10 mt-6">
-        
-        <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-200">
-            <img src="nevera.webp" class="w-full h-72 object-cover" alt="Reparación de Neveras">
-            <div class="p-6 text-center">
-                <h2 class="text-3xl font-black text-blue-900 uppercase leading-none">Reparación de Neveras</h2>
-                <p class="text-lg text-gray-600 font-bold mt-3 italic text-center">Servicio técnico hoy mismo con garantía real.</p>
-                <a href="tel:+573045864731" class="mt-4 inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-black text-lg uppercase btn-urgencia shadow-md">Llamar Ahora</a>
-            </div>
-        </div>
+<section class="beneficios">
+    <div class="ben-item">
+        <h3>⚡ Rapidez</h3>
+        <p>Atención el mismo día de tu llamado.</p>
+    </div>
+    <div class="ben-item">
+        <h3>✅ Garantía</h3>
+        <p>Garantía por escrito en mano de obra.</p>
+    </div>
+    <div class="ben-item">
+        <h3>🛠️ Expertos</h3>
+        <p>Técnicos certificados en todas las marcas.</p>
+    </div>
+</section>
 
-        <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-200">
-            <img src="lavadora.jfif" class="w-full h-72 object-cover" alt="Reparación de Lavadoras">
-            <div class="p-6 text-center">
-                <h2 class="text-3xl font-black text-blue-900 uppercase leading-none">Reparación de Lavadoras</h2>
-                <p class="text-lg text-gray-600 font-bold mt-3 italic text-center">Mantenimiento experto de todas las marcas.</p>
-                <a href="tel:+573045864731" class="mt-4 inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-black text-lg uppercase btn-urgencia shadow-md">Pedir Técnico</a>
-            </div>
-        </div>
-
-    </main>
-
-    <footer class="bg-blue-900 text-white py-12 text-center mt-12 border-t-4 border-yellow-400">
-        <p class="text-xl font-black uppercase italic tracking-widest text-white">¡Atención 24 Horas!</p>
-        <p class="opacity-80 mt-2 text-sm uppercase text-white">Barranquilla y Soledad</p>
-    </footer>
+<!-- Botón Flotante -->
+<a href="https://wa.me/573000000000" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WhatsApp">
+</a>
 
 </body>
 </html>
