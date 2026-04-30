@@ -1,33 +1,140 @@
-<div class="container-servicios">
-    <!-- Bloque 1: Lavadoras -->
-    <div class="bloque-servicio">
-        <div class="img-box">
-            <!-- Forzamos la ruta completa de tu repositorio -->
-            <img src="https://raw.githubusercontent.com/Juanp1981-boop/servicio-tecnico-express/main/img/lavadora.jpg" alt="Lavadoras" onerror="this.src='https://via.placeholder.com/800x400?text=Imagen+en+Proceso'">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiservices SOS | Reparación de Neveras y Lavadoras Barranquilla</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #24d366; --gris: #f2f2f2; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; background: #fff; overflow-x: hidden; }
+        
+        header { background: var(--azul); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 15px 0; border-bottom: 3px solid var(--amarillo); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo-text { color: white; font-size: 1.6em; font-weight: 900; text-transform: uppercase; }
+        .logo-subtitle { color: var(--amarillo); font-size: 0.7em; font-weight: bold; text-transform: uppercase; }
+        .header-phone { background: var(--rojo); color: white; padding: 8px 18px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1em; }
+
+        .hero { background: linear-gradient(135deg, #004a99 0%, #005ab4 100%); color: white; padding: 160px 0 60px 0; text-align: center; }
+        .hero h1 { font-size: clamp(2.5em, 8vw, 3.5em); margin-bottom: 10px; font-weight: 900; }
+        .hero h1 span { color: var(--amarillo); }
+        .hero .subtitle { font-size: 1.2em; margin-bottom: 30px; opacity: 0.9; padding: 0 10px; }
+        
+        .emergency-banner { background: var(--rojo); color: white; padding: 18px; margin: 20px 5%; border-radius: 10px; font-size: 1.1em; font-weight: bold; display: block; text-decoration: none; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
+
+        .marcas-strip { background: rgba(255,255,255,0.1); padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2); }
+        .marcas-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-weight: bold; color: white; opacity: 0.9; font-size: 0.9em; }
+
+        .container-servicios { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+        .bloque-servicio { margin-bottom: 50px; display: flex; flex-direction: column; }
+        .img-box { width: 100%; height: 300px; overflow: hidden; border-radius: 15px 15px 0 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #eee; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .info-card { background: var(--gris); padding: 35px 25px; border-radius: 0 0 15px 15px; border-bottom: 8px solid var(--azul); }
+        .info-card h3 { color: var(--azul); font-size: 26px; text-align: center; margin-bottom: 15px; font-weight: 900; }
+        .lista { list-style: none; padding: 0; margin: 0 auto; max-width: 400px; }
+        .lista li { margin-bottom: 12px; font-size: 17px; font-weight: bold; padding-left: 35px; position: relative; }
+        .lista li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--verde); position: absolute; left: 0; font-size: 20px; }
+
+        .trust-section { background: #fff; padding: 60px 20px; text-align: center; }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px; }
+        .trust-item i { font-size: 40px; color: var(--amarillo); margin-bottom: 15px; }
+
+        footer { background: var(--azul); color: white; padding: 40px 20px; text-align: center; }
+        .footer-info p { margin: 10px 0; opacity: 0.8; }
+
+        .whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 30px; right: 30px; background-color: var(--verde); color: #fff; border-radius: 50px; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; animation: bounce 2s infinite; font-size: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } }
+
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 8px; }
+            .hero { padding: 200px 0 50px 0; }
+            .img-box { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFFKTKM2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <header>
+        <div class="header-content">
+            <div>
+                <div class="logo-text">Multiservices SOS</div>
+                <div class="logo-subtitle">Línea Blanca Barranquilla</div>
+            </div>
+            <a href="tel:+573045864731" class="header-phone">📞 304 586 4731</a>
         </div>
-        <div class="info-card">
-            <h3>LAVADORAS</h3>
-            <ul class="lista">
-                <li>Carga Frontal / Superior</li>
-                <li>Torres de Lavado</li>
-                <li>Mantenimiento Preventivo</li>
-            </ul>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Técnicos de <span>Neveras y Lavadoras</span></h1>
+            <p class="subtitle">Servicio profesional a domicilio con repuestos originales</p>
+            <a href="tel:+573045864731" class="emergency-banner">🚨 REPARACIÓN INMEDIATA - ¡LLAMA YA! 🚨</a>
+            <div class="marcas-strip">
+                <div class="marcas-container">
+                    <span>SAMSUNG</span> | <span>LG</span> | <span>WHIRLPOOL</span> | <span>MABE</span> | <span>BOSCH</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-servicios">
+        <div class="bloque-servicio">
+            <div class="img-box">
+                <img src="https://raw.githubusercontent.com/Juanp1981-boop/servicio-tecnico-express/main/img/lavadora.jpg" alt="Lavadoras">
+            </div>
+            <div class="info-card">
+                <h3>LAVADORAS</h3>
+                <ul class="lista">
+                    <li>Carga Frontal / Superior</li>
+                    <li>Torres de Lavado</li>
+                    <li>Mantenimiento Preventivo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bloque-servicio">
+            <div class="img-box">
+                <img src="https://raw.githubusercontent.com/Juanp1981-boop/servicio-tecnico-express/main/img/nevera.jpg" alt="Neveras">
+            </div>
+            <div class="info-card">
+                <h3>NEVERAS Y NEVECONES</h3>
+                <ul class="lista">
+                    <li>Sistemas Inverter</li>
+                    <li>Carga de Gas Refrigerante</li>
+                    <li>Filtros y Dispensadores</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <!-- Bloque 2: Neveras -->
-    <div class="bloque-servicio">
-        <div class="img-box">
-            <!-- Forzamos la ruta completa de tu repositorio -->
-            <img src="https://raw.githubusercontent.com/Juanp1981-boop/servicio-tecnico-express/main/img/nevera.jpg" alt="Neveras" onerror="this.src='https://via.placeholder.com/800x400?text=Imagen+en+Proceso'">
+    <section class="trust-section">
+        <h2>¿Por qué elegir Multiservices SOS?</h2>
+        <div class="trust-grid">
+            <div class="trust-item"><i class="fas fa-shield-alt"></i><h3>Garantía Real</h3><p>Respaldo por escrito en cada trabajo.</p></div>
+            <div class="trust-item"><i class="fas fa-user-check"></i><h3>Técnicos Pro</h3><p>Expertos certificados en Barranquilla.</p></div>
+            <div class="trust-item"><i class="fas fa-tools"></i><h3>Repuestos Originales</h3><p>Calidad garantizada de fábrica.</p></div>
         </div>
-        <div class="info-card">
-            <h3>NEVERAS Y NEVECONES</h3>
-            <ul class="lista">
-                <li>Sistemas Inverter</li>
-                <li>Carga de Gas Refrigerante</li>
-                <li>Filtros y Dispensadores</li>
-            </ul>
+    </section>
+
+    <footer>
+        <div class="footer-info">
+            <h3>Multiservices SOS</h3>
+            <p>Barranquilla y Área Metropolitana</p>
+            <p>Atención 24/7 en Urgencias Técnicas</p>
+            <p>© 2026 - Todos los derechos reservados</p>
         </div>
-    </div>
-</div>
+    </footer>
+
+    <a href="https://wa.me/573045864731?text=Hola%20Multiservices%20SOS,%20necesito%20técnico%20urgente" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
