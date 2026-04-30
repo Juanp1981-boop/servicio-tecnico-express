@@ -3,88 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Técnico Línea Blanca Barranquilla | TecnicoYa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>TecnicoYa | Reparación de Línea Blanca en Barranquilla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --azul: #004aad; --amarillo: #ffde59; --rojo: #ff3131; --bg: #f8f9fa; }
-        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; color: #333; }
-        
-        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--azul); sticky; top:0; z-index:1000;}
-        .logo { font-family: 'Montserrat', sans-serif; color: var(--azul); font-size: 1.6rem; font-weight: 800; }
+        :root { --azul: #004aad; --amarillo: #ffde59; --rojo: #ff3131; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #fff; }
+        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--azul); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Montserrat', sans-serif; color: var(--azul); font-size: 1.8rem; }
         .logo span { color: var(--rojo); }
-
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1581092921461-7d15cb48a6ef?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover; background-position: center; color: white; padding: 80px 5%; text-align: center;
-        }
         
-        .grid-equipos { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; padding: 50px 5%; max-width: 1200px; margin: auto; 
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/4586711/pexels-photo-4586711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-size: cover; background-position: center; color: #fff; padding: 100px 5%; text-align: center; 
         }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin: 0; text-transform: uppercase; }
+        .btn-wa { background: #25d366; color: #fff; padding: 20px 40px; border-radius: 10px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 30px; font-size: 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-        .card-equipo { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-bottom: 5px solid var(--azul); }
-        .card-equipo img { width: 100%; height: 220px; object-fit: cover; transition: 0.3s; }
-        .card-equipo:hover img { transform: scale(1.05); }
-        .card-info { padding: 20px; text-align: center; }
-        .card-info h3 { margin: 0 0 10px; font-family: 'Montserrat'; font-size: 1.2rem; color: var(--azul); }
+        .section-title { text-align: center; font-family: 'Montserrat'; font-size: 2.2rem; margin: 50px 0 20px; color: var(--azul); }
+        
+        .grid-equipos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; padding: 20px 5%; max-width: 1300px; margin: auto; }
+        .card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-bottom: 6px solid var(--azul); }
+        .card img { width: 100%; height: 280px; object-fit: cover; }
+        .card-body { padding: 25px; text-align: center; }
+        .card h3 { margin: 0 0 10px; font-family: 'Montserrat'; font-size: 1.4rem; color: var(--azul); }
 
-        .btn-wa { background: #25d366; color: white; padding: 18px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 20px; }
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 1000; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(0,0,0,0.4); z-index: 1000; }
+        footer { background: #222; color: #fff; text-align: center; padding: 40px; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">TECNICO<span>YA</span></div>
-    <a href="tel:+573000000000" style="color:var(--rojo); font-weight:bold; text-decoration:none;">📞 LLAMAR TÉCNICO</a>
+    <a href="tel:+573000000000" style="color:var(--rojo); font-weight:bold; text-decoration:none; font-size:1.3rem;">📞 LLAMAR TÉCNICO</a>
 </header>
 
 <section class="hero">
-    <h1>REPARACIÓN EXPERTA DE <span style="color:var(--amarillo)">LÍNEA BLANCA</span></h1>
-    <p>Atención inmediata en Barranquilla para todo tipo de electrodomésticos.</p>
-    <a href="https://wa.me/573000000000" class="btn-wa">SOLICITAR SERVICIO HOY</a>
+    <h1>REPARACIÓN DE <span style="color:var(--amarillo)">LÍNEA BLANCA</span></h1>
+    <p style="font-size:1.5rem;">Servicio Técnico a Domicilio en Barranquilla. Garantía Real de 1 Año.</p>
+    <a href="https://wa.me/573000000000?text=Hola,%20necesito%20servicio%20tecnico" class="btn-wa">SOLICITAR TÉCNICO AHORA</a>
 </section>
 
-<h2 style="text-align:center; margin-top:40px; font-family:'Montserrat';">EQUIPOS QUE ATENDEMOS</h2>
+<h2 class="section-title">EQUIPOS ESPECIALIZADOS</h2>
 
 <div class="grid-equipos">
     <!-- LAVADORAS -->
-    <div class="card-equipo">
-        <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=500" alt="Lavadora Carga Frontal">
-        <div class="card-info"><h3>Lavadoras Carga Frontal</h3><p>Reparación de sellos, rodamientos y tarjetas.</p></div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/5591581/pexels-photo-5591581.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lavadora Carga Frontal">
+        <div class="card-body">
+            <h3>Carga Frontal</h3>
+            <p>Especialistas en rodamientos, sellos y tarjetas electrónicas.</p>
+        </div>
     </div>
-    <div class="card-equipo">
-        <img src="https://images.unsplash.com/photo-1545173168-9f1947e96a36?q=80&w=500" alt="Lavadora Carga Superior">
-        <div class="card-info"><h3>Lavadoras Carga Superior</h3><p>Mantenimiento de transmisión y bombas de drenaje.</p></div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/4586711/pexels-photo-4586711.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lavadora Carga Superior">
+        <div class="card-body">
+            <h3>Carga Superior</h3>
+            <p>Mantenimiento preventivo, cambio de bombas y transmisiones.</p>
+        </div>
     </div>
-    <div class="card-equipo">
-        <img src="https://images.unsplash.com/photo-1510539139734-183447675e46?q=80&w=500" alt="Torres de Lavado">
-        <div class="card-info"><h3>Torres de Lavado</h3><p>Servicio integral para lavadora y secadora acoplada.</p></div>
-    </div>
-
     <!-- NEVERAS -->
-    <div class="card-equipo">
-        <img src="https://images.unsplash.com/photo-1571175432291-fe44d5672684?q=80&w=500" alt="Neveras Nevecones">
-        <div class="card-info"><h3>Nevecones (Side by Side)</h3><p>Reparación de dispensadores de hielo y compresores.</p></div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/6633658/pexels-photo-6633658.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nevecones">
+        <div class="card-body">
+            <h3>Nevecones (Side by Side)</h3>
+            <p>Carga de gas refrigerante y reparación de dispensadores de hielo.</p>
+        </div>
     </div>
-    <div class="card-equipo">
-        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=500" alt="Neveras Convencionales">
-        <div class="card-info"><h3>Neveras Convencionales</h3><p>Carga de gas y cambio de termostatos.</p></div>
-    </div>
-    <div class="card-equipo">
-        <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?q=80&w=500" alt="Cavas y Enfriadores">
-        <div class="card-info"><h3>Cavas y Enfriadores</h3><p>Especialistas en sistemas de enfriamiento comercial.</p></div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/6913473/pexels-photo-6913473.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Neveras Convencionales">
+        <div class="card-body">
+            <h3>Neveras Convencionales</h3>
+            <p>Reparación de sistemas de descongelación y cambio de compresores.</p>
+        </div>
     </div>
 </div>
 
-<footer style="background:#222; color:#fff; text-align:center; padding: 40px;">
-    <p><strong>TECNICOYA BARRANQUILLA</strong><br>Expertos en Samsung, LG, Whirlpool y más.</p>
+<footer>
+    <p><strong>TECNICOYA BARRANQUILLA</strong><br>Servicio para Samsung, LG, Whirlpool, Mabe y más.<br>© 2026</p>
 </footer>
 
 <a href="https://wa.me/573000000000" class="wa-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" alt="WhatsApp">
 </a>
 
 </body>
