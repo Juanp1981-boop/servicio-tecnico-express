@@ -1,103 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiservices SOS | Reparación de Neveras y Lavadoras Barranquilla</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>Multiservices SOS | Barranquilla</title>
     <style>
-        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #24d366; --gris: #f4f4f4; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
-
-        header { background: var(--azul); padding: 15px 0; border-bottom: 4px solid var(--amarillo); position: fixed; width: 100%; top: 0; z-index: 1000; text-align: center; }
-        .logo-text { color: white; font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
-        .header-phone { display: block; color: var(--amarillo); font-weight: bold; text-decoration: none; font-size: 1.2rem; margin-top: 5px; }
-
-        .hero { background: linear-gradient(135deg, #004a99 0%, #002d62 100%); color: white; padding: 140px 20px 40px; text-align: center; }
-        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-weight: 900; }
-        .hero h1 span { color: var(--amarillo); }
-        .emergency-banner { background: var(--rojo); color: white; padding: 15px; margin: 20px 0; border-radius: 8px; font-weight: bold; display: block; text-decoration: none; font-size: 1.1rem; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
-
-        .container-servicios { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        .bloque { margin-bottom: 40px; background: var(--gris); border-radius: 15px; overflow: hidden; border-bottom: 5px solid var(--azul); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .img-box { width: 100%; height: 300px; background: #ddd; }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        
-        .info { padding: 25px; text-align: center; }
-        .info h3 { color: var(--azul); font-size: 1.6rem; margin-bottom: 15px; font-weight: bold; }
-        .lista { list-style: none; text-align: left; display: inline-block; }
-        .lista li { margin-bottom: 10px; font-weight: bold; padding-left: 35px; position: relative; font-size: 1.1rem; }
-        .lista li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--verde); position: absolute; left: 0; font-size: 20px; }
-
-        footer { background: var(--azul); color: white; padding: 30px 20px; text-align: center; margin-top: 40px; }
-        .ws-float { position: fixed; width: 65px; height: 65px; bottom: 30px; right: 30px; background: var(--verde); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 35px; text-decoration: none; z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 1.8rem; }
-            .img-box { height: 220px; }
-        }
+        /* CSS INTEGRADO - NO SE PUEDE ROMPER */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; text-align: center; }
+        header { background: #004a99; color: white; padding: 20px; border-bottom: 5px solid #ffcc00; position: sticky; top: 0; z-index: 100; }
+        .phone { color: #ffcc00; font-size: 1.5em; text-decoration: none; font-weight: bold; }
+        .hero { background: #005ab4; color: white; padding: 60px 20px; }
+        .btn-urgencia { background: #e31e24; color: white; padding: 20px; display: block; margin: 20px auto; width: 80%; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; }
+        .servicio { margin: 40px auto; max-width: 600px; background: #f2f2f2; border-radius: 15px; overflow: hidden; border-bottom: 8px solid #004a99; }
+        .servicio img { width: 100%; height: 300px; object-fit: cover; display: block; }
+        .info { padding: 20px; }
+        footer { background: #004a99; color: white; padding: 30px; margin-top: 50px; }
+        .ws-float { position: fixed; bottom: 20px; right: 20px; background: #24d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFFKTKM2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
     <header>
-        <div class="logo-text">Multiservices SOS</div>
-        <a href="tel:+573045864731" class="header-phone">📞 304 586 4731</a>
+        <div style="font-size: 1.8em; font-weight: 900;">MULTISERVICES SOS</div>
+        <a href="tel:+573045864731" class="phone">📞 304 586 4731</a>
     </header>
 
     <section class="hero">
-        <h1>Técnicos de <span>Neveras y Lavadoras</span></h1>
-        <p>Servicio profesional garantizado en Barranquilla</p>
-        <a href="tel:+573045864731" class="emergency-banner">🚨 REPARACIÓN INMEDIATA - ¡LLAMA YA! 🚨</a>
+        <h1>Técnicos de Neveras y Lavadoras</h1>
+        <p>Servicio Garantizado en Barranquilla</p>
+        <a href="tel:+573045864731" class="btn-urgencia">🚨 LLAMAR AHORA 🚨</a>
     </section>
 
-    <div class="container-servicios">
-        <!-- Lavadoras -->
-        <div class="bloque">
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?auto=format&fit=crop&q=80&w=800" alt="Lavadoras">
-            </div>
-            <div class="info">
-                <h3>LAVADORAS</h3>
-                <ul class="lista">
-                    <li>Carga Frontal / Superior</li>
-                    <li>Torres de Lavado</li>
-                    <li>Mantenimiento Preventivo</li>
-                </ul>
-            </div>
+    <div class="servicio">
+        <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?q=80&w=800" alt="Lavadoras">
+        <div class="info">
+            <h2>REPARACIÓN DE LAVADORAS</h2>
+            <p>Mantenimiento preventivo y correctivo.</p>
         </div>
+    </div>
 
-        <!-- Neveras -->
-        <div class="bloque">
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1571175452282-f56e70b3c7c7?auto=format&fit=crop&q=80&w=800" alt="Neveras">
-            </div>
-            <div class="info">
-                <h3>NEVERAS Y NEVECONES</h3>
-                <ul class="lista">
-                    <li>Sistemas Inverter</li>
-                    <li>Carga de Gas Refrigerante</li>
-                    <li>Filtros y Dispensadores</li>
-                </ul>
-            </div>
+    <div class="servicio">
+        <img src="https://images.unsplash.com/photo-1571175452282-f56e70b3c7c7?q=80&w=800" alt="Neveras">
+        <div class="info">
+            <h2>REPARACIÓN DE NEVERAS</h2>
+            <p>Técnicos expertos en todas las marcas.</p>
         </div>
     </div>
 
     <footer>
         <p><strong>Multiservices SOS</strong></p>
-        <p>Barranquilla y Área Metropolitana</p>
-        <p>© 2026 - Atención Técnica Profesional</p>
+        <p>Barranquilla - Atención 24/7</p>
     </footer>
 
-    <a href="https://wa.me/573045864731?text=Hola%20Multiservices%20SOS,%20necesito%20técnico%20urgente" class="ws-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <a href="https://wa.me/573045864731" class="ws-float">W</a>
 </body>
 </html>
