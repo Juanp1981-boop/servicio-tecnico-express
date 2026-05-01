@@ -17,11 +17,31 @@
         .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; }
         .header-tel { display: block; color: var(--amarillo); font-weight: bold; text-decoration: none; font-size: 1.2rem; margin-top: 5px; }
 
-        .hero { background: linear-gradient(rgba(0,74,153,0.8), rgba(0,74,153,0.8)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200'); background-size: cover; background-position: center; color: white; padding: 80px 20px 40px; text-align: center; }
-        .hero h1 { font-size: 2.2rem; margin-bottom: 15px; line-height: 1.2; }
+        /* HERO OSCURECIDO NEUTRO (SIN AZUL) */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            padding: 100px 20px 60px; 
+            text-align: center; 
+        }
+        .hero h1 { 
+            font-size: 2.2rem; 
+            margin-bottom: 15px; 
+            line-height: 1.2; 
+            font-weight: 800;
+        }
         .hero h1 span { color: var(--amarillo); }
+        .hero p { 
+            font-size: 1.2rem; 
+            font-weight: 500; 
+            max-width: 600px;
+            margin: 0 auto;
+        }
         
-        .cta-btn { background: var(--rojo); color: white; padding: 18px 30px; display: inline-block; margin: 20px 0; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 5px 15px rgba(227,30,36,0.4); transition: transform 0.2s; }
+        .cta-btn { background: var(--rojo); color: white; padding: 18px 30px; display: inline-block; margin: 25px 0; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+        .cta-btn:hover { transform: scale(1.05); background: #b3161b; }
 
         .services-container { padding: 30px 15px; max-width: 900px; margin: 0 auto; display: grid; gap: 25px; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #eee; text-align: left; }
@@ -49,7 +69,6 @@
     </section>
 
     <div class="services-container">
-        <!-- Imagen específica de Lavadora -->
         <div class="card">
             <img src="https://images.unsplash.com/photo-1626806819282-2c1dfbd1a5e1?q=80&w=800" class="card-img" alt="Reparación de Lavadora">
             <div class="card-body">
@@ -62,7 +81,6 @@
             </div>
         </div>
 
-        <!-- Imagen específica de Nevera -->
         <div class="card">
             <img src="https://images.unsplash.com/photo-1571175452282-f56e70b3c7c7?q=80&w=800" class="card-img" alt="Reparación de Nevera">
             <div class="card-body">
