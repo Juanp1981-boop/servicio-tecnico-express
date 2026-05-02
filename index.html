@@ -31,13 +31,13 @@
         
         .cta-btn { background: var(--rojo); color: white; padding: 18px 30px; display: inline-block; margin: 25px 0; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; }
 
-        .services-container { padding: 30px 15px; max-width: 900px; margin: 0 auto; display: grid; gap: 25px; }
+        .services-container { padding: 30px 15px; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #eee; text-align: left; }
-        .card-img { width: 100%; height: 250px; object-fit: cover; }
+        .card-img { width: 100%; height: 200px; object-fit: cover; }
         .card-body { padding: 20px; }
-        .card-body h3 { color: var(--azul); margin: 0 0 10px; font-size: 1.4rem; }
-        .card-body ul { list-style: none; padding: 0; }
-        .card-body li { margin: 8px 0; padding-left: 25px; position: relative; font-weight: 500; }
+        .card-body h3 { color: var(--azul); margin: 0 0 10px; font-size: 1.3rem; }
+        .card-body ul { list-style: none; padding: 0; margin-bottom: 0; }
+        .card-body li { margin: 8px 0; padding-left: 25px; position: relative; font-weight: 500; font-size: 0.95rem; }
         .card-body li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: #28a745; position: absolute; left: 0; }
 
         footer { background: #222; color: #aaa; padding: 30px 20px; text-align: center; font-size: 0.9rem; }
@@ -51,44 +51,70 @@
     </header>
 
     <section class="hero">
-        <h1>Técnicos Expertos en <span>Neveras y Lavadoras</span></h1>
-        <p>Garantía por escrito y atención inmediata a domicilio.</p>
+        <h1>Servicio Técnico de <span>Línea Blanca</span></h1>
+        <p>Mantenimiento y reparación experta a domicilio en Barranquilla. ¡Garantía por escrito!</p>
         <a href="tel:+573045864731" class="cta-btn">¡SOLICITAR TÉCNICO AHORA!</a>
     </section>
 
     <div class="services-container">
-        <!-- SECCIÓN LAVADORAS -->
+        <!-- SECCIÓN LAVADORAS - MANTENIDA -->
         <div class="card">
-            <img src="lavadora.webp" class="card-img" alt="Reparación de Lavadoras en Barranquilla">
+            <img src="lavadora.webp" class="card-img" alt="Reparación de Lavadoras">
             <div class="card-body">
                 <h3>Lavadoras y Secadoras</h3>
                 <ul>
-                    <li>Reparación de tarjetas digitales</li>
+                    <li>Reparación de tarjetas y motores</li>
                     <li>Mantenimiento preventivo</li>
-                    <li>Repuestos 100% originales</li>
+                    <li>Cambio de bombas y correas</li>
                 </ul>
             </div>
         </div>
 
-        <!-- SECCIÓN NEVERAS -->
+        <!-- SECCIÓN NEVERAS - MANTENIDA -->
         <div class="card">
-            <img src="nevera.webp" class="card-img" alt="Reparación de Neveras en Barranquilla">
+            <img src="nevera.webp" class="card-img" alt="Reparación de Neveras">
             <div class="card-body">
                 <h3>Neveras y Nevecones</h3>
                 <ul>
                     <li>Carga de gas refrigerante</li>
-                    <li>Arreglo de sistemas Inverter</li>
-                    <li>Cambio de filtros de agua</li>
+                    <li>Reparación de sistemas Inverter</li>
+                    <li>Cambio de bimetálicos y filtros</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECCIÓN AIRES ACONDICIONADOS - NUEVA -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1631548231149-1e309068097b?q=80&w=800" class="card-img" alt="Mantenimiento de Aires Acondicionados">
+            <div class="card-body">
+                <h3>Aires Acondicionados</h3>
+                <ul>
+                    <li>Limpieza profunda (Mantenimiento)</li>
+                    <li>Detección y corrección de fugas</li>
+                    <li>Instalación y recarga de gas</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- LÍNEA BLANCA GENERAL - NUEVA -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800" class="card-img" alt="Reparación de Línea Blanca">
+            <div class="card-body">
+                <h3>Línea Blanca en General</h3>
+                <ul>
+                    <li>Hornos y Estufas a gas/eléctricas</li>
+                    <li>Calentadores de agua</li>
+                    <li>Repuestos originales garantizados</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <footer>
-        <p><strong>Multiservices SOS Barranquilla</strong><br>Servicio Técnico Autorizado 24/7</p>
+        <p><strong>Multiservices SOS Barranquilla</strong><br>Expertos en Reparación y Mantenimiento 24/7</p>
     </footer>
 
-    <a href="https://wa.me/573045864731?text=Hola,%20necesito%20un%20servicio%20técnico" class="ws-float">
+    <a href="https://wa.me/573045864731?text=Hola,%20necesito%20un%20servicio%20técnico%20de%20línea%20blanca" class="ws-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 </body>
