@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiservices SOS | Reparación Expert en Barranquilla</title>
-    <!-- GTM -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,8 +12,30 @@
         :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; background: #f8f9fa; }
         
-        header { background: var(--azul); color: white; padding: 15px; text-align: center; border-bottom: 4px solid var(--amarillo); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; }
+        /* HEADER OPTIMIZADO CON LOGO */
+        header { 
+            background: var(--azul); 
+            color: white; 
+            padding: 10px 15px; 
+            text-align: center; 
+            border-bottom: 4px solid var(--amarillo); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .logo-img {
+            width: 45px; /* Tamaño ideal para móvil y desktop */
+            height: 45px;
+            border-radius: 5px;
+        }
+        .brand-name { font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; }
         .header-tel { display: block; color: var(--amarillo); font-weight: bold; text-decoration: none; font-size: 1.2rem; margin-top: 5px; }
 
         .hero { 
@@ -46,7 +67,10 @@
 </head>
 <body>
     <header>
-        <div class="logo">MULTISERVICES SOS</div>
+        <div class="header-content">
+            <img src="logo-sos.png" alt="Logo Multiservices SOS" class="logo-img">
+            <div class="brand-name">MULTISERVICES SOS</div>
+        </div>
         <a href="tel:+573045864731" class="header-tel"><i class="fas fa-phone"></i> 304 586 4731</a>
     </header>
 
@@ -57,7 +81,6 @@
     </section>
 
     <div class="services-container">
-        <!-- LAVADORAS -->
         <div class="card">
             <img src="lavadora.webp" class="card-img" alt="Reparación de Lavadoras">
             <div class="card-body">
@@ -70,7 +93,6 @@
             </div>
         </div>
 
-        <!-- NEVERAS -->
         <div class="card">
             <img src="nevera.webp" class="card-img" alt="Reparación de Neveras">
             <div class="card-body">
@@ -83,7 +105,6 @@
             </div>
         </div>
 
-        <!-- AIRES ACONDICIONADOS -->
         <div class="card">
             <img src="aire acondicionado.webp" class="card-img" alt="Mantenimiento de Aires Acondicionados">
             <div class="card-body">
@@ -96,7 +117,6 @@
             </div>
         </div>
 
-        <!-- ESTUFAS Y CALENTADORES -->
         <div class="card">
             <img src="calentador.webp" class="card-img" alt="Reparación de Estufas y Calentadores">
             <div class="card-body">
