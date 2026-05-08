@@ -21,15 +21,19 @@
         .logo-img { width: 50px; height: 50px; object-fit: contain; }
         .brand-name { font-size: 1.6rem; font-weight: 900; margin: 0; }
 
-        /* HERO: FONDO CON header-real.jpg Y OSCURIDAD 0.4 */
+        /* HERO OPTIMIZADO PARA CARGA RÁPIDA */
         .hero { 
             position: relative;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('header-real.jpg'); 
+            /* Agregamos un color de fondo para que no se vea blanco mientras carga */
+            background-color: #001a33; 
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('header-real.jpg'); 
             background-size: cover; 
             background-position: center; 
             color: white; 
             padding: 100px 20px; 
             text-align: center;
+            /* Fuerza al navegador a priorizar esta imagen */
+            content-visibility: auto;
         }
         .hero h1 { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
         .hero h1 span { color: var(--amarillo); }
@@ -37,10 +41,11 @@
         
         .cta-btn { background: var(--rojo); color: white; padding: 20px 45px; display: inline-block; margin-top: 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
 
-        /* TARJETAS CON DESCRIPCIONES TÉCNICAS */
+        /* TARJETAS */
         .services { padding: 40px 20px; max-width: 1100px; margin: -50px auto 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; position: relative; z-index: 2; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.15); border: 1px solid #ddd; display: flex; flex-direction: column; }
-        .card img { width: 100%; height: 180px; object-fit: cover; }
+        /* Lazy load nativo para las imágenes de abajo */
+        .card img { width: 100%; height: 180px; object-fit: cover; content-visibility: auto; }
         .card-body { padding: 20px; text-align: left; }
         .card h3 { color: var(--azul); margin: 0 0 10px 0; font-size: 1.4rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
         .card p { font-size: 1rem; line-height: 1.4; color: #444; margin: 10px 0 0 0; font-weight: 500; }
@@ -65,34 +70,34 @@
 
     <div class="services">
         <div class="card">
-            <img src="lavadora.webp" alt="Lavadoras">
+            <img src="lavadora.webp" alt="Lavadoras" loading="lazy">
             <div class="card-body">
                 <h3>LAVADORAS</h3>
-                <p>Reparación de tarjetas, cambio de transmisión, bombas de drenaje y motores. Todas las marcas: Samsung, LG, Whirlpool y Mabe.</p>
+                <p>Reparación de tarjetas, cambio de transmisión, bombas de drenaje y motores. Todas las marcas.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="nevera.webp" alt="Neveras">
+            <img src="nevera.webp" alt="Neveras" loading="lazy">
             <div class="card-body">
                 <h3>NEVERAS</h3>
-                <p>Carga de gas, cambio de sensores, reparación de compresores e instalación de filtros. Especialistas en sistemas Inverter.</p>
+                <p>Carga de gas, cambio de sensores, reparación de compresores. Especialistas en sistemas Inverter.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="aire acondicionado.webp" alt="Aires">
+            <img src="aire acondicionado.webp" alt="Aires" loading="lazy">
             <div class="card-body">
                 <h3>AIRES AC.</h3>
-                <p>Mantenimiento preventivo, carga de refrigerante, detección de fugas y corrección de fallas eléctricas en Minisplits.</p>
+                <p>Mantenimiento preventivo, carga de refrigerante, detección de fugas y fallas eléctricas.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="calentador.webp" alt="Estufas">
+            <img src="calentador.webp" alt="Estufas" loading="lazy">
             <div class="card-body">
                 <h3>ESTUFAS</h3>
-                <p>Limpieza de quemadores, cambio de termocuplas, válvulas de seguridad y conversión a gas natural o propano.</p>
+                <p>Limpieza de quemadores, cambio de termocuplas, válvulas de seguridad y conversión a gas.</p>
             </div>
         </div>
     </div>
