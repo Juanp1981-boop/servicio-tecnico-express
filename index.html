@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Técnico Ya | Reparación Línea Blanca Barranquilla</title>
+    <meta name="description" content="Servicio técnico experto en Barranquilla. Reparación de neveras, lavadoras y aires hoy mismo. ¡Garantía por escrito!">
     
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
     
@@ -24,29 +25,39 @@
         .brand-name { font-size: 2rem; font-weight: 900; letter-spacing: 1.5px; margin: 0; line-height: 1; }
         .header-tel { color: var(--amarillo); font-weight: bold; text-decoration: none; font-size: 1.4rem; margin-top: 5px; display: flex; align-items: center; gap: 10px; }
 
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200'); background-size: cover; background-position: center; color: white; padding: 100px 20px 60px; text-align: center; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; font-weight: 900; }
+        /* HERO: Configurado con la imagen image_0e914e.png y filtro oscuro */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('image_0e914e.png'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            padding: 130px 20px 90px; 
+            text-align: center; 
+        }
+        .hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 900; text-transform: uppercase; text-shadow: 2px 2px 15px rgba(0,0,0,0.6); }
         .hero h1 span { color: var(--amarillo); }
+        .hero p { font-size: 1.5rem; font-weight: 600; max-width: 800px; margin: 0 auto; text-shadow: 1px 1px 8px rgba(0,0,0,0.6); line-height: 1.4; }
         
-        .cta-btn { background: var(--rojo); color: white; padding: 18px 35px; display: inline-block; margin: 25px 0; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.3rem; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+        .cta-btn { background: var(--rojo); color: white; padding: 22px 45px; display: inline-block; margin: 35px 0; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.5rem; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: 0.3s; }
+        .cta-btn:hover { transform: scale(1.05); background: #c1171c; }
 
-        .services-container { padding: 30px 15px; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .services-container { padding: 50px 15px; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #eee; text-align: left; }
         .card-img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-body h3 { color: var(--azul); margin-bottom: 10px; font-size: 1.4rem; }
-        .card-body ul { list-style: none; padding: 0; }
-        .card-body li { margin: 8px 0; padding-left: 25px; position: relative; font-weight: 500; }
+        .card-body { padding: 25px; }
+        .card-body h3 { color: var(--azul); margin: 0 0 15px; font-size: 1.4rem; font-weight: 800; }
+        .card-body ul { list-style: none; padding: 0; margin-bottom: 0; }
+        .card-body li { margin: 10px 0; padding-left: 30px; position: relative; font-weight: 500; font-size: 1rem; }
         .card-body li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: #28a745; position: absolute; left: 0; }
 
-        footer { background: #222; color: #aaa; padding: 30px 20px; text-align: center; }
-        .ws-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 9999; }
+        footer { background: #222; color: #aaa; padding: 40px 20px; text-align: center; font-size: 1rem; }
+        .ws-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.3); z-index: 9999; }
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <img src="logo.webp" alt="Logo Multiservices" class="logo-img">
+            <img src="logo.webp" alt="Multiservices SOS" class="logo-img">
             <div class="brand-text">
                 <div class="brand-name">MULTISERVICES SOS</div>
                 <a href="tel:+573045864731" class="header-tel">
@@ -58,7 +69,7 @@
 
     <section class="hero">
         <h1>TECNICO <span>YA</span></h1>
-        <p>Mantenimiento y reparación experta en Barranquilla con garantía por escrito.</p>
+        <p>Mantenimiento y reparación experta en Barranquilla.<br>¡Garantía por escrito y atención hoy mismo!</p>
         <a href="tel:+573045864731" class="cta-btn">¡SOLICITAR TÉCNICO AHORA!</a>
     </section>
 
@@ -67,34 +78,34 @@
             <img src="lavadora.webp" class="card-img" alt="Lavadoras">
             <div class="card-body">
                 <h3>Lavadoras y Secadoras</h3>
-                <ul><li>Tarjetas y motores</li><li>Mantenimiento</li></ul>
+                <ul><li>Tarjetas y motores</li><li>Mantenimiento preventivo</li><li>Repuestos originales</li></ul>
             </div>
         </div>
         <div class="card">
             <img src="nevera.webp" class="card-img" alt="Neveras">
             <div class="card-body">
                 <h3>Neveras y Nevecones</h3>
-                <ul><li>Carga de gas</li><li>Sistemas Inverter</li></ul>
+                <ul><li>Carga de gas</li><li>Sistemas Inverter</li><li>Filtros de agua</li></ul>
             </div>
         </div>
         <div class="card">
             <img src="aire acondicionado.webp" class="card-img" alt="Aires">
             <div class="card-body">
                 <h3>Aires Acondicionados</h3>
-                <ul><li>Limpieza profunda</li><li>Carga de gas</li></ul>
+                <ul><li>Limpieza profunda</li><li>Detección de fugas</li><li>Instalación técnica</li></ul>
             </div>
         </div>
         <div class="card">
             <img src="calentador.webp" class="card-img" alt="Calentadores">
             <div class="card-body">
                 <h3>Estufas y Calentadores</h3>
-                <ul><li>Mantenimiento</li><li>Reparación a gas</li></ul>
+                <ul><li>Mantenimiento a gas</li><li>Reparación técnica</li><li>Técnicos certificados</li></ul>
             </div>
         </div>
     </div>
 
     <footer>
-        <p><strong>Multiservices SOS Barranquilla</strong></p>
+        <p><strong>Multiservices SOS Barranquilla</strong><br>Servicio Técnico de Confianza 24/7</p>
     </footer>
 
     <a href="https://wa.me/573045864731?text=Hola,%20necesito%20un%20servicio%20técnico" class="ws-float">
