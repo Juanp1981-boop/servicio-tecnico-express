@@ -12,66 +12,100 @@
         :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; background: #f8f9fa; }
         
-        /* HEADER OPTIMIZADO CON LOGO */
+        /* --- HEADER CORREGIDO Y BALANCEADO --- */
         header { 
             background: var(--azul); 
             color: white; 
-            padding: 10px 15px; 
+            padding: 15px 0; /* Un poco más de padding vertical para respirar */
             text-align: center; 
             border-bottom: 4px solid var(--amarillo); 
             position: sticky; 
             top: 0; 
             z-index: 1000; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-        .header-content {
+
+        .header-container {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* Centrado absoluto */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ESTILOS DEL LOGO REVISADOS */
+        .logo-img {
+            width: 70px; /* Tamaño optimizado */
+            height: 70px;
+            object-fit: contain; /* No se deforma */
+            margin-right: 20px; /* Espacio con el texto */
+            background: transparent; /* Fondo limpio */
+        }
+
+        .brand-text {
+            text-align: left; /* Texto alineado a la izquierda del bloque */
+        }
+
+        .brand-name { 
+            font-size: 2rem; /* Más grande y legible */
+            font-weight: 900; 
+            letter-spacing: 1.5px; 
+            margin: 0;
+            line-height: 1;
+        }
+
+        .header-tel { 
+            color: var(--amarillo); 
+            font-weight: bold; 
+            text-decoration: none; 
+            font-size: 1.4rem; 
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
             gap: 10px;
         }
-        .logo-img {
-            width: 45px; /* Tamaño ideal para móvil y desktop */
-            height: 45px;
-            border-radius: 5px;
-        }
-        .brand-name { font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; }
-        .header-tel { display: block; color: var(--amarillo); font-weight: bold; text-decoration: none; font-size: 1.2rem; margin-top: 5px; }
+        /* --- FIN DEL HEADER CORREGIDO --- */
 
         .hero { 
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200'); 
             background-size: cover; 
             background-position: center; 
             color: white; 
-            padding: 100px 20px 60px; 
+            padding: 120px 20px 80px; /* Más espacio en el hero */
             text-align: center; 
         }
-        .hero h1 { font-size: 2.2rem; margin-bottom: 15px; line-height: 1.2; font-weight: 800; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; line-height: 1.2; font-weight: 800; }
         .hero h1 span { color: var(--amarillo); }
-        .hero p { font-size: 1.2rem; font-weight: 500; max-width: 600px; margin: 0 auto; }
+        .hero p { font-size: 1.3rem; font-weight: 500; max-width: 700px; margin: 0 auto; }
         
-        .cta-btn { background: var(--rojo); color: white; padding: 18px 30px; display: inline-block; margin: 25px 0; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+        .cta-btn { background: var(--rojo); color: white; padding: 20px 35px; display: inline-block; margin: 30px 0; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.3rem; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: 0.3s; }
 
-        .services-container { padding: 30px 15px; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .services-container { padding: 40px 15px; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #eee; text-align: left; }
         .card-img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-body h3 { color: var(--azul); margin: 0 0 10px; font-size: 1.3rem; }
+        .card-body { padding: 25px; }
+        .card-body h3 { color: var(--azul); margin: 0 0 15px; font-size: 1.4rem; }
         .card-body ul { list-style: none; padding: 0; margin-bottom: 0; }
-        .card-body li { margin: 8px 0; padding-left: 25px; position: relative; font-weight: 500; font-size: 0.95rem; }
+        .card-body li { margin: 10px 0; padding-left: 30px; position: relative; font-weight: 500; font-size: 1rem; }
         .card-body li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: #28a745; position: absolute; left: 0; }
 
-        footer { background: #222; color: #aaa; padding: 30px 20px; text-align: center; font-size: 0.9rem; }
-        .ws-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 9999; }
+        footer { background: #222; color: #aaa; padding: 40px 20px; text-align: center; font-size: 1rem; }
+        .ws-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.3); z-index: 9999; }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="logo-sos.png" alt="Logo Multiservices SOS" class="logo-img">
-            <div class="brand-name">MULTISERVICES SOS</div>
+        <div class="header-container">
+            <img src="logo.webp" alt="Logo Multiservices SOS" class="logo-img">
+            
+            <div class="brand-text">
+                <div class="brand-name">MULTISERVICES SOS</div>
+                <a href="tel:+573045864731" class="header-tel">
+                    <i class="fas fa-phone-alt"></i> 304 586 4731
+                </a>
+            </div>
         </div>
-        <a href="tel:+573045864731" class="header-tel"><i class="fas fa-phone"></i> 304 586 4731</a>
     </header>
 
     <section class="hero">
@@ -79,56 +113,6 @@
         <p>Mantenimiento y reparación experta a domicilio en Barranquilla. ¡Garantía por escrito!</p>
         <a href="tel:+573045864731" class="cta-btn">¡SOLICITAR TÉCNICO AHORA!</a>
     </section>
-
-    <div class="services-container">
-        <div class="card">
-            <img src="lavadora.webp" class="card-img" alt="Reparación de Lavadoras">
-            <div class="card-body">
-                <h3>Lavadoras y Secadoras</h3>
-                <ul>
-                    <li>Reparación de tarjetas y motores</li>
-                    <li>Mantenimiento preventivo</li>
-                    <li>Cambio de bombas y correas</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="nevera.webp" class="card-img" alt="Reparación de Neveras">
-            <div class="card-body">
-                <h3>Neveras y Nevecones</h3>
-                <ul>
-                    <li>Carga de gas refrigerante</li>
-                    <li>Reparación de sistemas Inverter</li>
-                    <li>Cambio de bimetálicos y filtros</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="aire acondicionado.webp" class="card-img" alt="Mantenimiento de Aires Acondicionados">
-            <div class="card-body">
-                <h3>Aires Acondicionados</h3>
-                <ul>
-                    <li>Limpieza profunda (Mantenimiento)</li>
-                    <li>Detección y corrección de fugas</li>
-                    <li>Instalación y recarga de gas</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="calentador.webp" class="card-img" alt="Reparación de Estufas y Calentadores">
-            <div class="card-body">
-                <h3>Estufas y Calentadores</h3>
-                <ul>
-                    <li>Reparación de estufas a gas y eléctricas</li>
-                    <li>Mantenimiento de calentadores</li>
-                    <li>Repuestos originales certificados</li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <p><strong>Multiservices SOS Barranquilla</strong><br>Expertos en Reparación y Mantenimiento 24/7</p>
