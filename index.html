@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #25d366; }
+        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: #f8f9fa; color: #333; }
         
         header { 
@@ -23,10 +23,11 @@
         .logo-img { width: 50px; height: 50px; object-fit: contain; }
         .brand-name { font-size: 1.6rem; font-weight: 900; margin: 0; }
 
-        /* HERO: FONDO OSCURO 0.4 CON TU IMAGEN WEBP */
+        /* HERO: USANDO EL NUEVO ARCHIVO .WEBP CON OSCURIDAD 0.4 */
         .hero { 
             position: relative;
-            background: #001a33 linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('header-real.webp'); 
+            background: #001a33; 
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('header-real.webp'); 
             background-size: cover; 
             background-position: center; 
             color: white; 
@@ -37,29 +38,20 @@
         .hero h1 span { color: var(--amarillo); }
         .hero p { font-size: 1.5rem; font-weight: 600; margin-top: 15px; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
         
-        /* BOTÓN DE LLAMADA PRINCIPAL ROJO */
-        .cta-btn { 
-            background: var(--rojo); color: white; padding: 20px 45px; display: inline-block; 
-            margin-top: 25px; border-radius: 50px; text-decoration: none; font-weight: bold; 
-            font-size: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: transform 0.2s;
-        }
+        /* BOTÓN DE LLAMADA AÑADIDO */
+        .cta-btn { background: var(--rojo); color: white; padding: 20px 45px; display: inline-block; margin-top: 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: 0.2s; }
         .cta-btn:active { transform: scale(0.95); }
 
-        /* TARJETAS DE SERVICIOS CON DESCRIPCIÓN */
+        /* TARJETAS CON DESCRIPCIONES COMPLETAS */
         .services { padding: 40px 20px; max-width: 1100px; margin: -50px auto 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; position: relative; z-index: 2; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.15); border: 1px solid #ddd; display: flex; flex-direction: column; }
         .card img { width: 100%; height: 180px; object-fit: cover; }
         .card-body { padding: 20px; text-align: left; }
         .card h3 { color: var(--azul); margin: 0 0 10px 0; font-size: 1.4rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
-        .card p { font-size: 1rem; line-height: 1.4; color: #444; font-weight: 500; }
+        .card p { font-size: 1rem; line-height: 1.4; color: #444; margin: 10px 0 0 0; font-weight: 500; }
         
-        /* BOTÓN FLOTANTE WHATSAPP VERDE */
-        .ws-float { 
-            position: fixed; bottom: 30px; right: 30px; background: var(--verde); 
-            color: white; width: 65px; height: 65px; border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; 
-            font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 9999; 
-        }
+        /* BOTÓN WHATSAPP AÑADIDO */
+        .ws-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 9999; }
 
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.8rem; }
@@ -78,7 +70,7 @@
     </header>
 
     <section class="hero">
-        <h1>TÉCNICO <span>YA</span></h1>
+        <h1>TECNICO <span>YA</span></h1>
         <p>Expertos en Línea Blanca en Barranquilla.<br>Atención hoy mismo con repuestos originales.</p>
         <a href="tel:+573045864731" class="cta-btn"><i class="fas fa-phone"></i> ¡LLAMAR AHORA!</a>
     </section>
@@ -88,28 +80,31 @@
             <img src="lavadora.webp" alt="Lavadoras" loading="lazy">
             <div class="card-body">
                 <h3>LAVADORAS</h3>
-                <p>Reparación de tarjetas, cambio de transmisión, bombas de drenaje y motores. Samsung, LG, Whirlpool y Mabe.</p>
+                <p>Reparación de tarjetas, cambio de transmisión, bombas de drenaje y motores. Todas las marcas: Samsung, LG, Whirlpool y Mabe.</p>
             </div>
         </div>
+
         <div class="card">
             <img src="nevera.webp" alt="Neveras" loading="lazy">
             <div class="card-body">
                 <h3>NEVERAS</h3>
-                <p>Carga de gas, cambio de sensores, reparación de compresores e Inverter. Mantenimiento preventivo hoy mismo.</p>
+                <p>Carga de gas, cambio de sensores, reparación de compresores e instalación de filtros. Especialistas en sistemas Inverter.</p>
             </div>
         </div>
+
         <div class="card">
             <img src="aire acondicionado.webp" alt="Aires" loading="lazy">
             <div class="card-body">
                 <h3>AIRES AC.</h3>
-                <p>Mantenimiento preventivo, carga de refrigerante, detección de fugas y fallas eléctricas.</p>
+                <p>Mantenimiento preventivo, carga de refrigerante, detección de fugas y corrección de fallas eléctricas en Minisplits.</p>
             </div>
         </div>
+
         <div class="card">
             <img src="calentador.webp" alt="Estufas" loading="lazy">
             <div class="card-body">
                 <h3>ESTUFAS</h3>
-                <p>Limpieza de quemadores, cambio de termocuplas y válvulas de seguridad. Conversión a gas natural.</p>
+                <p>Limpieza de quemadores, cambio de termocuplas, válvulas de seguridad y conversión a gas natural o propano.</p>
             </div>
         </div>
     </div>
