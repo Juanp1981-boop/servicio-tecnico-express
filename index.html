@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiservices SOS | Reparación Línea Blanca Barranquilla</title>
     
-    <link rel="preload" as="image" href="header-real.webp">
+    <link rel="preload" as="image" href="header-real.webp" fetchpriority="high">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; }
+        :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #25d366; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: #f8f9fa; color: #333; }
         
         header { 
@@ -23,26 +23,25 @@
         .logo-img { width: 50px; height: 50px; object-fit: contain; }
         .brand-name { font-size: 1.6rem; font-weight: 900; margin: 0; }
 
-        /* HERO: USANDO EL NUEVO ARCHIVO .WEBP CON OSCURIDAD 0.4 */
+        /* HERO: OPTIMIZADO PARA CARGA INSTANTÁNEA */
         .hero { 
             position: relative;
-            background: #001a33; 
+            background: #001a33; /* Color de respaldo oscuro inmediato */
             background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('header-real.webp'); 
             background-size: cover; 
             background-position: center; 
             color: white; 
             padding: 100px 20px; 
             text-align: center;
+            /* Optimización de renderizado para evitar parpadeos */
+            aspect-ratio: 16 / 9;
         }
         .hero h1 { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
         .hero h1 span { color: var(--amarillo); }
         .hero p { font-size: 1.5rem; font-weight: 600; margin-top: 15px; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
         
-        /* BOTÓN DE LLAMADA AÑADIDO */
-        .cta-btn { background: var(--rojo); color: white; padding: 20px 45px; display: inline-block; margin-top: 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: 0.2s; }
-        .cta-btn:active { transform: scale(0.95); }
+        .cta-btn { background: var(--rojo); color: white; padding: 20px 45px; display: inline-block; margin-top: 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
 
-        /* TARJETAS CON DESCRIPCIONES COMPLETAS */
         .services { padding: 40px 20px; max-width: 1100px; margin: -50px auto 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; position: relative; z-index: 2; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.15); border: 1px solid #ddd; display: flex; flex-direction: column; }
         .card img { width: 100%; height: 180px; object-fit: cover; }
@@ -50,13 +49,13 @@
         .card h3 { color: var(--azul); margin: 0 0 10px 0; font-size: 1.4rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
         .card p { font-size: 1rem; line-height: 1.4; color: #444; margin: 10px 0 0 0; font-weight: 500; }
         
-        /* BOTÓN WHATSAPP AÑADIDO */
-        .ws-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 9999; }
+        .ws-float { position: fixed; bottom: 30px; right: 30px; background: var(--verde); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 9999; }
 
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.8rem; }
             .hero p { font-size: 1.2rem; }
             .cta-btn { font-size: 1.2rem; padding: 15px 35px; }
+            .hero { aspect-ratio: auto; min-height: 350px; }
         }
     </style>
 </head>
@@ -83,7 +82,6 @@
                 <p>Reparación de tarjetas, cambio de transmisión, bombas de drenaje y motores. Todas las marcas: Samsung, LG, Whirlpool y Mabe.</p>
             </div>
         </div>
-
         <div class="card">
             <img src="nevera.webp" alt="Neveras" loading="lazy">
             <div class="card-body">
@@ -91,7 +89,6 @@
                 <p>Carga de gas, cambio de sensores, reparación de compresores e instalación de filtros. Especialistas en sistemas Inverter.</p>
             </div>
         </div>
-
         <div class="card">
             <img src="aire acondicionado.webp" alt="Aires" loading="lazy">
             <div class="card-body">
@@ -99,7 +96,6 @@
                 <p>Mantenimiento preventivo, carga de refrigerante, detección de fugas y corrección de fallas eléctricas en Minisplits.</p>
             </div>
         </div>
-
         <div class="card">
             <img src="calentador.webp" alt="Estufas" loading="lazy">
             <div class="card-body">
