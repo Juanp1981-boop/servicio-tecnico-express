@@ -13,67 +13,21 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; background: #f8f9fa; }
         
         header { 
-            background: var(--azul); 
-            color: white; 
-            padding: 15px 0; 
-            text-align: center; 
-            border-bottom: 4px solid var(--amarillo); 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            background: var(--azul); color: white; padding: 15px 0; text-align: center; border-bottom: 4px solid var(--amarillo); 
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+        .header-container { display: flex; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
-        .logo-img {
-            width: 70px; 
-            height: 70px;
-            object-fit: contain;
-            margin-right: 20px;
-        }
+        .logo-img { width: 70px; height: 70px; object-fit: contain; margin-right: 20px; }
 
-        .brand-text {
-            text-align: left;
-        }
+        .brand-text { text-align: left; }
+        .brand-name { font-size: 2rem; font-weight: 900; letter-spacing: 1.5px; margin: 0; line-height: 1; }
+        .header-tel { color: var(--amarillo); font-weight: bold; text-decoration: none; font-size: 1.4rem; margin-top: 5px; display: flex; align-items: center; gap: 10px; }
 
-        .brand-name { 
-            font-size: 2rem; 
-            font-weight: 900; 
-            letter-spacing: 1.5px; 
-            margin: 0;
-            line-height: 1;
-        }
-
-        .header-tel { 
-            color: var(--amarillo); 
-            font-weight: bold; 
-            text-decoration: none; 
-            font-size: 1.4rem; 
-            margin-top: 5px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200'); 
-            background-size: cover; 
-            background-position: center; 
-            color: white; 
-            padding: 100px 20px 60px; 
-            text-align: center; 
-        }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200'); background-size: cover; background-position: center; color: white; padding: 100px 20px 60px; text-align: center; }
         .hero h1 { font-size: 2.2rem; margin-bottom: 15px; font-weight: 800; }
         .hero h1 span { color: var(--amarillo); }
-        .hero p { font-size: 1.2rem; font-weight: 500; max-width: 600px; margin: 0 auto; }
         
         .cta-btn { background: var(--rojo); color: white; padding: 18px 35px; display: inline-block; margin: 25px 0; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.3rem; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; }
 
@@ -93,7 +47,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="logo.png" alt="Logo Multiservices SOS" class="logo-img">
+            <img src="image_0f88d6.png" alt="Logo Multiservices SOS" class="logo-img">
             <div class="brand-text">
                 <div class="brand-name">MULTISERVICES SOS</div>
                 <a href="tel:+573045864731" class="header-tel">
@@ -111,40 +65,40 @@
 
     <div class="services-container">
         <div class="card">
-            <img src="lavadora.webp" class="card-img" alt="Reparación de Lavadoras">
+            <img src="lavadora.webp" class="card-img" alt="Lavadoras">
             <div class="card-body">
                 <h3>Lavadoras y Secadoras</h3>
-                <ul><li>Tarjetas y motores</li><li>Mantenimiento</li><li>Repuestos originales</li></ul>
+                <ul><li>Tarjetas y motores</li><li>Mantenimiento</li></ul>
             </div>
         </div>
         <div class="card">
-            <img src="nevera.webp" class="card-img" alt="Reparación de Neveras">
+            <img src="nevera.webp" class="card-img" alt="Neveras">
             <div class="card-body">
                 <h3>Neveras y Nevecones</h3>
-                <ul><li>Carga de gas</li><li>Sistemas Inverter</li><li>Filtros de agua</li></ul>
+                <ul><li>Carga de gas</li><li>Sistemas Inverter</li></ul>
             </div>
         </div>
         <div class="card">
-            <img src="aire acondicionado.webp" class="card-img" alt="Aires Acondicionados">
+            <img src="aire acondicionado.webp" class="card-img" alt="Aires">
             <div class="card-body">
                 <h3>Aires Acondicionados</h3>
-                <ul><li>Limpieza profunda</li><li>Fugas de gas</li><li>Instalación</li></ul>
+                <ul><li>Limpieza profunda</li><li>Carga de gas</li></ul>
             </div>
         </div>
         <div class="card">
-            <img src="calentador.webp" class="card-img" alt="Calentadores">
+            <img src="image_117940.png" class="card-img" alt="Calentadores">
             <div class="card-body">
                 <h3>Estufas y Calentadores</h3>
-                <ul><li>Mantenimiento</li><li>Reparación a gas</li><li>Técnicos certificados</li></ul>
+                <ul><li>Mantenimiento</li><li>Reparación a gas</li></ul>
             </div>
         </div>
     </div>
 
     <footer>
-        <p><strong>Multiservices SOS Barranquilla</strong><br>Servicio 24/7 - Expertos en Línea Blanca</p>
+        <p><strong>Multiservices SOS Barranquilla</strong></p>
     </footer>
 
-    <a href="https://wa.me/573045864731?text=Hola,%20necesito%20un%20servicio%20técnico" class="ws-float">
+    <a href="https://wa.me/573045864731?text=Hola" class="ws-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 </body>
