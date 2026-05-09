@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiservices SOS | Reparación Línea Blanca Barranquilla</title>
     
-    <link rel="preload" as="image" href="header-real.webp?v=11.0" fetchpriority="high">
+    <link rel="preload" as="image" href="header-real.webp?v=12.0" fetchpriority="high">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
     
@@ -26,7 +26,7 @@
         /* HERO COMPACTO CON CONTRASTE EXTREMO */
         .hero { 
             position: relative;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('header-real.webp?v=11.0'); 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('header-real.webp?v=12.0'); 
             background-size: cover; 
             background-position: center 30%; 
             color: white; 
@@ -34,20 +34,13 @@
             text-align: center;
         }
         .hero h1 { 
-            font-size: 3.5rem; 
-            font-weight: 900; 
-            text-transform: uppercase; 
-            margin: 0; 
-            text-shadow: 4px 4px 15px rgba(0,0,0,1); 
-            line-height: 1;
+            font-size: 3.5rem; font-weight: 900; text-transform: uppercase; margin: 0; 
+            text-shadow: 4px 4px 15px rgba(0,0,0,1); line-height: 1;
         }
         .hero h1 span { color: var(--amarillo); }
         .hero p { 
-            font-size: 1.4rem; 
-            font-weight: 700; 
-            margin: 15px 0 0 0; 
-            text-shadow: 2px 2px 10px rgba(0,0,0,1); 
-            line-height: 1.3;
+            font-size: 1.4rem; font-weight: 700; margin: 15px 0 0 0; 
+            text-shadow: 2px 2px 10px rgba(0,0,0,1); line-height: 1.3;
         }
         
         .cta-btn { 
@@ -57,7 +50,7 @@
             text-transform: uppercase;
         }
 
-        /* SERVICIOS CON MARCAS RESTAURADAS */
+        /* SERVICIOS */
         .services { padding: 40px 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
         .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column; }
         .card img { width: 100%; height: 160px; object-fit: cover; }
@@ -65,6 +58,14 @@
         .card h3 { color: var(--azul); margin: 0 0 8px 0; font-size: 1.25rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
         .card p { font-size: 0.95rem; line-height: 1.4; color: #555; margin: 0; font-weight: 600; }
         
+        /* SELLO DE MARCA - NO AFECTA LO DE ARRIBA */
+        footer {
+            background: #f4f4f4; padding: 30px 20px; text-align: center; border-top: 1px solid #ddd; margin-top: 20px;
+        }
+        .brand-seal {
+            font-size: 1rem; font-weight: 800; color: #999; text-transform: uppercase; letter-spacing: 2px;
+        }
+
         /* WHATSAPP */
         .ws-float { 
             position: fixed; bottom: 25px; right: 25px; background: var(--verde); 
@@ -85,7 +86,7 @@
 
     <header>
         <div class="header-container">
-            <img src="logo.webp" alt="Logo Multiservices SOS" class="logo-img">
+            <img src="logo.webp" alt="Logo Multiservices" class="logo-img">
             <h1 class="brand-name">MULTISERVICES SOS</h1>
         </div>
     </header>
@@ -98,34 +99,26 @@
 
     <div class="services">
         <div class="card">
-            <img src="lavadora.webp" alt="Reparación de Lavadoras" loading="lazy">
-            <div class="card-body">
-                <h3>LAVADORAS</h3>
-                <p>Reparación de tarjetas, cambio de transmisión, bombas y motores. Samsung, LG, Whirlpool y Mabe.</p>
-            </div>
+            <img src="lavadora.webp" alt="Lavadoras" loading="lazy">
+            <div class="card-body"><h3>LAVADORAS</h3><p>Reparación de tarjetas, cambio de transmisión, bombas y motores. Samsung, LG, Whirlpool y Mabe.</p></div>
         </div>
         <div class="card">
-            <img src="nevera.webp" alt="Reparación de Neveras" loading="lazy">
-            <div class="card-body">
-                <h3>NEVERAS</h3>
-                <p>Carga de gas, cambio de sensores, reparación de compresores e Inverter. Samsung, LG y Whirlpool.</p>
-            </div>
+            <img src="nevera.webp" alt="Neveras" loading="lazy">
+            <div class="card-body"><h3>NEVERAS</h3><p>Carga de gas, cambio de sensores, reparación de compresores e Inverter. Samsung, LG y Whirlpool.</p></div>
         </div>
         <div class="card">
             <img src="aire acondicionado.webp" alt="Aires" loading="lazy">
-            <div class="card-body">
-                <h3>AIRES AC.</h3>
-                <p>Mantenimiento preventivo, carga de gas, detección de fugas y fallas eléctricas. Todas las marcas.</p>
-            </div>
+            <div class="card-body"><h3>AIRES AC.</h3><p>Mantenimiento preventivo, carga de gas, detección de fugas y fallas eléctricas.</p></div>
         </div>
         <div class="card">
             <img src="calentador.webp" alt="Estufas" loading="lazy">
-            <div class="card-body">
-                <h3>ESTUFAS</h3>
-                <p>Limpieza de quemadores, cambio de termocuplas y válvulas de seguridad. Conversión a gas natural.</p>
-            </div>
+            <div class="card-body"><h3>ESTUFAS</h3><p>Limpieza de quemadores, cambio de termocuplas y válvulas de seguridad.</p></div>
         </div>
     </div>
+
+    <footer>
+        <div class="brand-seal">RANK AND ROLL 2026</div>
+    </footer>
 
     <a href="https://wa.me/573045864731" class="ws-float">
         <i class="fab fa-whatsapp"></i>
