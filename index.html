@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiservices SOS | Reparación Línea Blanca Barranquilla</title>
     
-    <link rel="preload" as="image" href="header-real.webp?v=10.0" fetchpriority="high">
+    <link rel="preload" as="image" href="header-real.webp?v=11.0" fetchpriority="high">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
     
@@ -23,24 +23,21 @@
         .logo-img { width: 40px; height: 40px; object-fit: contain; }
         .brand-name { font-size: 1.4rem; font-weight: 900; margin: 0; text-transform: uppercase; }
 
-        /* HERO DEFINITIVO CON CONTRASTE EXTREMO */
+        /* HERO COMPACTO CON CONTRASTE EXTREMO */
         .hero { 
             position: relative;
-            /* CAPA NEGRA PARA QUE EL TEXTO RESALTE */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('header-real.webp?v=10.0'); 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('header-real.webp?v=11.0'); 
             background-size: cover; 
             background-position: center 30%; 
             color: white; 
             padding: 60px 20px; 
             text-align: center;
-            border-bottom: 5px solid var(--amarillo);
         }
         .hero h1 { 
             font-size: 3.5rem; 
             font-weight: 900; 
             text-transform: uppercase; 
             margin: 0; 
-            /* SOMBRA PARA LEGIBILIDAD */
             text-shadow: 4px 4px 15px rgba(0,0,0,1); 
             line-height: 1;
         }
@@ -60,9 +57,9 @@
             text-transform: uppercase;
         }
 
-        /* SERVICIOS */
+        /* SERVICIOS CON MARCAS RESTAURADAS */
         .services { padding: 40px 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column; }
         .card img { width: 100%; height: 160px; object-fit: cover; }
         .card-body { padding: 15px; }
         .card h3 { color: var(--azul); margin: 0 0 8px 0; font-size: 1.25rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
@@ -88,7 +85,7 @@
 
     <header>
         <div class="header-container">
-            <img src="logo.webp" alt="Logo" class="logo-img">
+            <img src="logo.webp" alt="Logo Multiservices SOS" class="logo-img">
             <h1 class="brand-name">MULTISERVICES SOS</h1>
         </div>
     </header>
@@ -100,10 +97,34 @@
     </section>
 
     <div class="services">
-        <div class="card"><img src="lavadora.webp" alt="Lavadoras"><div class="card-body"><h3>LAVADORAS</h3><p>Reparación de tarjetas, transmisión, bombas y motores.</p></div></div>
-        <div class="card"><img src="nevera.webp" alt="Neveras"><div class="card-body"><h3>NEVERAS</h3><p>Carga de gas, sensores, compresores e Inverter.</p></div></div>
-        <div class="card"><img src="aire acondicionado.webp" alt="Aires"><div class="card-body"><h3>AIRES AC.</h3><p>Mantenimiento preventivo, carga de gas y fugas.</p></div></div>
-        <div class="card"><img src="calentador.webp" alt="Estufas"><div class="card-body"><h3>ESTUFAS</h3><p>Limpieza de quemadores, termocuplas y válvulas.</p></div></div>
+        <div class="card">
+            <img src="lavadora.webp" alt="Reparación de Lavadoras" loading="lazy">
+            <div class="card-body">
+                <h3>LAVADORAS</h3>
+                <p>Reparación de tarjetas, cambio de transmisión, bombas y motores. Samsung, LG, Whirlpool y Mabe.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="nevera.webp" alt="Reparación de Neveras" loading="lazy">
+            <div class="card-body">
+                <h3>NEVERAS</h3>
+                <p>Carga de gas, cambio de sensores, reparación de compresores e Inverter. Samsung, LG y Whirlpool.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="aire acondicionado.webp" alt="Aires" loading="lazy">
+            <div class="card-body">
+                <h3>AIRES AC.</h3>
+                <p>Mantenimiento preventivo, carga de gas, detección de fugas y fallas eléctricas. Todas las marcas.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="calentador.webp" alt="Estufas" loading="lazy">
+            <div class="card-body">
+                <h3>ESTUFAS</h3>
+                <p>Limpieza de quemadores, cambio de termocuplas y válvulas de seguridad. Conversión a gas natural.</p>
+            </div>
+        </div>
     </div>
 
     <a href="https://wa.me/573045864731" class="ws-float">
