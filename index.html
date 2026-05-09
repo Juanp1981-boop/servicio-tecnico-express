@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiservices SOS | Reparación Línea Blanca Barranquilla</title>
     
-    <link rel="preload" as="image" href="header-real.webp?v=3.0" fetchpriority="high">
+    <link rel="preload" as="image" href="header-real.webp?v=8.0" fetchpriority="high">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PFFKTKM2');</script>
     
@@ -13,59 +13,73 @@
     
     <style>
         :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #25d366; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: #f8f9fa; color: #333; overflow-x: hidden; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: #fff; color: #333; overflow-x: hidden; }
         
         header { 
             background: var(--azul); color: white; padding: 10px 0; text-align: center; border-bottom: 4px solid var(--amarillo); 
             position: sticky; top: 0; z-index: 1000;
         }
-        .header-container { display: flex; align-items: center; justify-content: center; gap: 12px; }
+        .header-container { display: flex; align-items: center; justify-content: center; gap: 10px; }
         .logo-img { width: 40px; height: 40px; object-fit: contain; }
-        .brand-name { font-size: 1.4rem; font-weight: 900; margin: 0; }
+        .brand-name { font-size: 1.4rem; font-weight: 900; margin: 0; text-transform: uppercase; }
 
-        /* HERO COMPACTO: MOSTRANDO TU DISEÑO SIN TAPARLO */
+        /* HERO COMPACTO CON CONTRASTE ALTO */
         .hero { 
             position: relative;
-            background: #001a33 url('header-real.webp?v=3.0'); 
+            /* El degradado asegura que el texto blanco se vea SIEMPRE */
+            background: #001a33 linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('header-real.webp?v=8.0'); 
             background-size: cover; 
             background-position: center; 
-            /* ALTURA COMPACTA PARA QUE NO OCUPE TANTO ESPACIO */
-            min-height: 280px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end; 
-            align-items: center;
-            padding-bottom: 25px;
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center;
+        }
+        .hero h1 { 
+            font-size: 3.2rem; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            margin: 0; 
+            /* Sombra de texto para legibilidad extrema */
+            text-shadow: 3px 3px 15px rgba(0,0,0,1); 
+            line-height: 1;
+        }
+        .hero h1 span { color: var(--amarillo); }
+        .hero p { 
+            font-size: 1.4rem; 
+            font-weight: 700; 
+            margin: 15px 0 0 0; 
+            text-shadow: 2px 2px 10px rgba(0,0,0,1); 
+            line-height: 1.2;
         }
         
-        /* BOTÓN DE LLAMADA INTEGRADO EN TU DISEÑO */
         .cta-btn { 
-            background: var(--rojo); color: white; padding: 15px 40px; display: inline-block; 
-            border-radius: 50px; text-decoration: none; font-weight: bold; 
-            font-size: 1.3rem; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: 0.2s;
-            border: 2px solid white;
+            background: var(--rojo); color: white; padding: 18px 45px; display: inline-block; 
+            margin-top: 30px; border-radius: 50px; text-decoration: none; font-weight: 900; 
+            font-size: 1.5rem; box-shadow: 0 8px 20px rgba(0,0,0,0.5); border: 2px solid white;
+            text-transform: uppercase;
         }
-        .cta-btn:active { transform: scale(0.95); }
 
         /* SERVICIOS */
-        .services { padding: 30px 20px; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #ddd; }
-        .card img { width: 100%; height: 150px; object-fit: cover; }
-        .card-body { padding: 15px; text-align: left; }
-        .card h3 { color: var(--azul); margin: 0 0 8px 0; font-size: 1.2rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
-        .card p { font-size: 0.95rem; line-height: 1.4; color: #444; font-weight: 500; margin: 0; }
+        .services { padding: 30px 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .card img { width: 100%; height: 160px; object-fit: cover; }
+        .card-body { padding: 15px; }
+        .card h3 { color: var(--azul); margin: 0 0 8px 0; font-size: 1.25rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
+        .card p { font-size: 0.95rem; line-height: 1.4; color: #555; margin: 0; font-weight: 500; }
         
         /* WHATSAPP FLOTANTE */
         .ws-float { 
             position: fixed; bottom: 25px; right: 25px; background: var(--verde); 
-            color: white; width: 60px; height: 60px; border-radius: 50%; 
+            color: white; width: 65px; height: 65px; border-radius: 50%; 
             display: flex; align-items: center; justify-content: center; 
             font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 9999; 
         }
 
         @media (max-width: 600px) {
-            .hero { min-height: 220px; padding-bottom: 20px; }
-            .cta-btn { font-size: 1.1rem; padding: 12px 30px; }
+            .hero { padding: 50px 15px; }
+            .hero h1 { font-size: 2.6rem; }
+            .hero p { font-size: 1.2rem; }
+            .cta-btn { font-size: 1.3rem; padding: 15px 35px; }
         }
     </style>
 </head>
@@ -73,32 +87,22 @@
 
     <header>
         <div class="header-container">
-            <img src="logo.webp" alt="Logo Multiservices" class="logo-img">
+            <img src="logo.webp" alt="Logo" class="logo-img">
             <h1 class="brand-name">MULTISERVICES SOS</h1>
         </div>
     </header>
 
     <section class="hero">
+        <h1>TÉCNICO <span>YA</span></h1>
+        <p>Mantenimiento y reparación en Barranquilla.<br>Garantía por escrito y atención hoy mismo.</p>
         <a href="tel:+573045864731" class="cta-btn"><i class="fas fa-phone"></i> ¡LLAMAR AHORA!</a>
     </section>
 
     <div class="services">
-        <div class="card">
-            <img src="lavadora.webp" alt="Reparación de Lavadoras" loading="lazy">
-            <div class="card-body"><h3>LAVADORAS</h3><p>Reparación de tarjetas, transmisión, bombas y motores. Todas las marcas.</p></div>
-        </div>
-        <div class="card">
-            <img src="nevera.webp" alt="Reparación de Neveras" loading="lazy">
-            <div class="card-body"><h3>NEVERAS</h3><p>Carga de gas, compresores e Inverter. Mantenimiento hoy mismo.</p></div>
-        </div>
-        <div class="card">
-            <img src="aire acondicionado.webp" alt="Mantenimiento Aires" loading="lazy">
-            <div class="card-body"><h3>AIRES AC.</h3><p>Mantenimiento preventivo, carga de gas y detección de fugas.</p></div>
-        </div>
-        <div class="card">
-            <img src="calentador.webp" alt="Servicio Estufas" loading="lazy">
-            <div class="card-body"><h3>ESTUFAS</h3><p>Limpieza de quemadores, termocuplas y válvulas de seguridad.</p></div>
-        </div>
+        <div class="card"><img src="lavadora.webp" alt="Lavadoras"><div class="card-body"><h3>LAVADORAS</h3><p>Reparación de tarjetas, transmisión, bombas y motores. Todas las marcas.</p></div></div>
+        <div class="card"><img src="nevera.webp" alt="Neveras"><div class="card-body"><h3>NEVERAS</h3><p>Carga de gas, sensores, compresores e Inverter. Atención inmediata.</p></div></div>
+        <div class="card"><img src="aire acondicionado.webp" alt="Aires"><div class="card-body"><h3>AIRES AC.</h3><p>Mantenimiento preventivo, carga de gas y detección de fugas.</p></div></div>
+        <div class="card"><img src="calentador.webp" alt="Estufas"><div class="card-body"><h3>ESTUFAS</h3><p>Limpieza de quemadores, termocuplas y conversión a gas natural.</p></div></div>
     </div>
 
     <a href="https://wa.me/573045864731" class="ws-float">
