@@ -13,49 +13,54 @@
     
     <style>
         :root { --azul: #004a99; --rojo: #e31e24; --amarillo: #ffcc00; --verde: #25d366; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: #f8f9fa; color: #333; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: #f8f9fa; color: #333; overflow-x: hidden; }
         
         header { 
-            background: var(--azul); color: white; padding: 12px 0; text-align: center; border-bottom: 4px solid var(--amarillo); 
+            background: var(--azul); color: white; padding: 10px 0; text-align: center; border-bottom: 4px solid var(--amarillo); 
             position: sticky; top: 0; z-index: 1000;
         }
-        .header-container { display: flex; align-items: center; justify-content: center; gap: 15px; }
-        .logo-img { width: 50px; height: 50px; object-fit: contain; }
-        .brand-name { font-size: 1.6rem; font-weight: 900; margin: 0; }
+        .header-container { display: flex; align-items: center; justify-content: center; gap: 12px; }
+        .logo-img { width: 45px; height: 45px; object-fit: contain; }
+        .brand-name { font-size: 1.5rem; font-weight: 900; margin: 0; }
 
-        /* HERO: OPTIMIZADO PARA CARGA INSTANTÁNEA */
         .hero { 
             position: relative;
-            background: #001a33; /* Color de respaldo oscuro inmediato */
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('header-real.webp'); 
+            background: #001a33 linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('header-real.webp'); 
             background-size: cover; 
             background-position: center; 
             color: white; 
-            padding: 100px 20px; 
+            padding: 40px 20px; 
             text-align: center;
-            /* Optimización de renderizado para evitar parpadeos */
-            aspect-ratio: 16 / 9;
         }
-        .hero h1 { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
+        .hero h1 { font-size: 2.8rem; font-weight: 900; text-transform: uppercase; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
         .hero h1 span { color: var(--amarillo); }
-        .hero p { font-size: 1.5rem; font-weight: 600; margin-top: 15px; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
+        .hero p { font-size: 1.2rem; font-weight: 600; margin: 10px 0 0 0; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
         
-        .cta-btn { background: var(--rojo); color: white; padding: 20px 45px; display: inline-block; margin-top: 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
+        /* BOTÓN LLAMADA */
+        .cta-btn { 
+            background: var(--rojo); color: white; padding: 15px 35px; display: inline-block; 
+            margin-top: 20px; border-radius: 50px; text-decoration: none; font-weight: bold; 
+            font-size: 1.3rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); 
+        }
 
-        .services { padding: 40px 20px; max-width: 1100px; margin: -50px auto 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; position: relative; z-index: 2; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.15); border: 1px solid #ddd; display: flex; flex-direction: column; }
-        .card img { width: 100%; height: 180px; object-fit: cover; }
-        .card-body { padding: 20px; text-align: left; }
-        .card h3 { color: var(--azul); margin: 0 0 10px 0; font-size: 1.4rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
-        .card p { font-size: 1rem; line-height: 1.4; color: #444; margin: 10px 0 0 0; font-weight: 500; }
+        .services { padding: 30px 20px; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column; }
+        .card img { width: 100%; height: 160px; object-fit: cover; }
+        .card-body { padding: 15px; text-align: left; }
+        .card h3 { color: var(--azul); margin: 0 0 8px 0; font-size: 1.3rem; font-weight: 800; border-bottom: 2px solid var(--amarillo); display: inline-block; }
+        .card p { font-size: 0.95rem; line-height: 1.4; color: #555; margin: 0; font-weight: 500; }
         
-        .ws-float { position: fixed; bottom: 30px; right: 30px; background: var(--verde); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 9999; }
+        /* BOTÓN WHATSAPP */
+        .ws-float { 
+            position: fixed; bottom: 20px; right: 20px; background: var(--verde); 
+            color: white; width: 60px; height: 60px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 32px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 9999; 
+        }
 
         @media (max-width: 600px) {
-            .hero h1 { font-size: 2.8rem; }
-            .hero p { font-size: 1.2rem; }
-            .cta-btn { font-size: 1.2rem; padding: 15px 35px; }
-            .hero { aspect-ratio: auto; min-height: 350px; }
+            .hero h1 { font-size: 2.2rem; }
+            .cta-btn { font-size: 1.1rem; padding: 12px 30px; }
         }
     </style>
 </head>
@@ -69,39 +74,27 @@
     </header>
 
     <section class="hero">
-        <h1>TECNICO <span>YA</span></h1>
-        <p>Expertos en Línea Blanca en Barranquilla.<br>Atención hoy mismo con repuestos originales.</p>
+        <h1>TÉCNICO <span>YA</span></h1>
+        <p>Expertos en Línea Blanca en Barranquilla.<br>Atención hoy mismo con garantía.</p>
         <a href="tel:+573045864731" class="cta-btn"><i class="fas fa-phone"></i> ¡LLAMAR AHORA!</a>
     </section>
 
     <div class="services">
         <div class="card">
             <img src="lavadora.webp" alt="Lavadoras" loading="lazy">
-            <div class="card-body">
-                <h3>LAVADORAS</h3>
-                <p>Reparación de tarjetas, cambio de transmisión, bombas de drenaje y motores. Todas las marcas: Samsung, LG, Whirlpool y Mabe.</p>
-            </div>
+            <div class="card-body"><h3>LAVADORAS</h3><p>Reparación de tarjetas, cambio de transmisión, bombas y motores.</p></div>
         </div>
         <div class="card">
             <img src="nevera.webp" alt="Neveras" loading="lazy">
-            <div class="card-body">
-                <h3>NEVERAS</h3>
-                <p>Carga de gas, cambio de sensores, reparación de compresores e instalación de filtros. Especialistas en sistemas Inverter.</p>
-            </div>
+            <div class="card-body"><h3>NEVERAS</h3><p>Carga de gas, sensores, compresores e Inverter. Mantenimiento hoy.</p></div>
         </div>
         <div class="card">
             <img src="aire acondicionado.webp" alt="Aires" loading="lazy">
-            <div class="card-body">
-                <h3>AIRES AC.</h3>
-                <p>Mantenimiento preventivo, carga de refrigerante, detección de fugas y corrección de fallas eléctricas en Minisplits.</p>
-            </div>
+            <div class="card-body"><h3>AIRES AC.</h3><p>Mantenimiento preventivo, carga de gas y detección de fugas.</p></div>
         </div>
         <div class="card">
             <img src="calentador.webp" alt="Estufas" loading="lazy">
-            <div class="card-body">
-                <h3>ESTUFAS</h3>
-                <p>Limpieza de quemadores, cambio de termocuplas, válvulas de seguridad y conversión a gas natural o propano.</p>
-            </div>
+            <div class="card-body"><h3>ESTUFAS</h3><p>Limpieza de quemadores, termocuplas y conversión a gas.</p></div>
         </div>
     </div>
 
